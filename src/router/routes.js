@@ -4,7 +4,10 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', redirect: '/shipping-calculator' },
+      { path: '/shipping-calculator', component: () => import('pages/ShippingCalculator.vue')},
+      { path: '/pricing-report', component: () => import('pages/PricingReport.vue')},
+      { path: '/quotation', component: () => import('pages/Quotation.vue')}
     ]
   },
 
