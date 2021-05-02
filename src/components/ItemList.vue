@@ -1,10 +1,21 @@
 <template>
   <div>
-     <div class="q-gutter-xs q-mt-md">
-      <q-chip v-for="(chip,i) in chips" :key="i" removable color="primary" text-color="white">
-        {{ chip }}
-      </q-chip>
+     <div class="q-gutter-xs q-pa-sm">
+       <q-input bottom-slots v-model="searchQuery" label="Search" counter dense @input="$refs.grid.search(searchQuery)">
+        <template v-slot:append>
+          <q-icon v-if="searchQuery !== ''" name="close" @click="clearSearch" class="cursor-pointer" />
+          <q-icon name="search" />
+        </template>
+
+        <template v-slot:hint>
+          Category | Item Name | Description
+        </template>
+      </q-input>
     </div>
+    
+     <q-banner v-if="enableSelection" class="bg-primary text-white q-mt-sm" dense>
+       Select or click to add an item.
+    </q-banner>
     <div class="e-resizable q-mt-xs">
       <ejs-grid
         class="q-pt-md"
@@ -13,22 +24,16 @@
         :allowTextWrap='true'
         :dataBound="dataBound"
         :detailTemplate="detailsTemplate"
-        :selectionSettings='selectionOptions'
         :allowPaging="true"
         :pageSettings='pageSettings'
         :enableHover="false"
         :allowSelection="enableSelection"
         :allowFiltering='true' 
         :filterSettings='filterOptions'
-        :toolbar='toolbar'
-        :toolbarClick='clickHandler'
+        :searchSettings='searchOptions'
         :rowSelected="rowSelected"
-        :rowDeselected="rowDeselected"
-        :rowSelecting="rowSelecting"
-        :rowDeselecting="rowDeselecting"
       >
         <e-columns>
-          <e-column v-if="enableSelection"  :lockColumn='true'  type='checkbox' width='50'></e-column>
            <e-column
             field='id'
             headerText='Id'
@@ -79,11 +84,6 @@
         </e-columns>
       </ejs-grid>
     </div>
-    <div class="q-mt-lg row justify-end">
-      <div class="col-12">
-      <q-btn v-if="enableSelection" color="primary" class="float-right q-mr-md" icon="add" label="Add to quote" rounded @click="addToQuote"/>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -109,14 +109,8 @@ export default {
   data () {
     return {
       items,
-      chips: [],
+      searchQuery: '',
       priceLevel,
-      selectionOptions: {
-        persistSelection: true,
-        type: 'Multiple',
-        allowColumnSelection: false, 
-      },
-      toolbar: ['Clear Search', 'Search'],
       filterOptions: {
         type: 'Menu',
         operators: {
@@ -127,7 +121,10 @@ export default {
           ],
         }
       },
-      pageSettings: { pageSizes: true, pageSize: 10 },
+      searchOptions: {
+        fields: ['details.category', 'details.itemName', 'details.description']
+      },
+      pageSettings: { pageSizes: true, pageSize: 15 },
       detailsTemplate: function () {
         return {
           template: ItemDetailTemplate
@@ -136,46 +133,12 @@ export default {
     }
   },
   methods: {
-    addToQuote () {
-      // if (selectedRecords.length < 1) {
-      //   this.$q.notify({
-      //     message: 'No selected items, click the "x" button instead.',
-      //     color: 'warning',
-      //     icon: 'warning',
-      //     actions: [
-      //       { label: 'Dismiss', color: 'white', handler: () => { /* ... */ } }
-      //     ]
-      //   })
-      // }
-    },
     rowSelected: function(args) {
-      if (this.chips.length > 0) {
-        const find = _.find(this.chips, x => x === args.data.details.itemName);
-        if (find === undefined) this.chips.push(args.data.details.itemName);
-      } else this.chips.push(args.data.details.itemName);
+      if (args.data !== undefined) this.$emit('item-select', args.data);
     },
-    rowDeselected: function(args) {
-      if (args.data === undefined) {
-        this.chips = [];
-        return;
-      }
-      if (this.chips.length > 0) {
-        const index = _.findIndex(this.chips, x => x === args.data.details.itemName);
-        if (index > -1) {
-          this.chips.splice(index, 1);
-        }
-      }
-    },
-    rowSelecting: function(args) {
-      if(_.isArray(args.data)) args.cancel = true;
-    },
-    rowDeselecting: function(args) {
-      if(_.isArray(args.data)) args.cancel = true;
-    },
-    clickHandler: function(args) {
-      if(args.item.text === 'Clear Search') {
-        this.$refs.grid.ej2Instances.searchSettings.key = "";
-      }
+    clearSearch () {
+      this.searchQuery = ''
+      this.$refs.grid.search(this.searchQuery);
     },
     dataBound: function () {
       this.$refs.grid.autoFitColumns(['details.category', 'details.itemName', 'details.description', 'oldMainPrice', 'oldBranchPrice', 'newPrice', 'difference']);
@@ -203,9 +166,9 @@ export default {
   resize: both;
   overflow: auto;
   padding: 10px;
-  height: 600px;
+  height: 550;
   width: 100%;
-  min-height: 600px;
+  min-height: 550px;
   min-width: 300px;
 }
 </style>

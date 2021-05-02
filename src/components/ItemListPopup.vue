@@ -11,7 +11,7 @@
         <q-btn icon="close" flat round dense v-close-popup />
       </q-card-section>
         <q-card-section>
-          <item-list-component :enableSelection="true" />
+          <item-list-component :enableSelection="true" @item-select="itemSelect" />
         </q-card-section>
     </q-card>
   </q-dialog>
@@ -29,6 +29,12 @@ export default {
       set (val) {
         this.$emit('input', val);
       }
+    }
+  },
+  methods: {
+    itemSelect: function(data) {
+      this.$emit('item-select', data);
+      this.dialog = false;
     }
   }
 }
