@@ -12,23 +12,13 @@ import {
   ColumnMenu,
   Freeze,
   ExcelExport,
-  DetailRow
+  DetailRow,
+  Group,
+  Edit
 } from "@syncfusion/ej2-vue-grids";
 
 Vue.use(GridPlugin);
 
 export const Provide = {
-  Grid: [
-    DetailRow,
-    Page,
-    Search,
-    Filter,
-    Resize,
-    Sort,
-    ColumnChooser,
-    Toolbar,
-    ExcelExport,
-    ColumnMenu,
-    Freeze
-  ]
+  Grid: [DetailRow, Page, Search, Filter, Resize, ColumnMenu, Toolbar, Group]
 };

@@ -1,6 +1,7 @@
 import inventory from "assets/inventory.json";
 import priceLevel from "src/helpers/PriceLevel.js";
 import _ from "lodash";
+import { v4 as uuidv4 } from "uuid";
 import v from "voca";
 
 const items = inventory.Items;
@@ -53,6 +54,7 @@ _.forEach(items, data => {
   data.NewPriceBranchDiff = round(data.NewPrice - data.BranchPrice);
 
   formattedItems.push({
+    id: uuidv4(),
     details: {
       category: data.Category,
       itemName: data.ItemName,
