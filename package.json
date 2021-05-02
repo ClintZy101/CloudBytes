@@ -11,10 +11,20 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@syncfusion/ej2-vue-barcode-generator": "^18.4.39",
+    "@syncfusion/ej2-vue-buttons": "^18.4.39",
+    "@syncfusion/ej2-vue-calendars": "^18.4.39",
+    "@syncfusion/ej2-vue-circulargauge": "^18.4.39",
+    "@syncfusion/ej2-vue-dropdowns": "^18.4.39",
+    "@syncfusion/ej2-vue-grids": "^18.4.49",
+    "@syncfusion/ej2-vue-inputs": "^18.4.39",
+    "@syncfusion/ej2-vue-navigations": "^18.4.39",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "currency.js": "^2.0.3",
     "lodash": "^4.17.21",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "voca": "^1.4.0"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",
