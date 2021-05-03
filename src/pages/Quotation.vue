@@ -11,7 +11,7 @@
         <q-radio v-model="priceType" val="mainPrice" label="Main Price" />
         <q-radio v-model="priceType" val="branchPrice" label="Branch Price" />
       </div>
-     <q-list bordered separator class="q-mt-md" v-for="item in getItems" :key="item.id">
+     <q-list bordered separator class="q-mt-md" v-for="item in items" :key="item.id">
        <q-slide-item :id="item.id" @left="opt => removeItem(opt, item.id)" left-color="red" ref="slide">
         <template v-slot:left>
           <q-icon name="done" /> Removed
@@ -32,6 +32,13 @@
         </q-item>
       </q-slide-item>
      </q-list>
+     <q-card flat bordered class="q-mt-md" v-if="items.length === 0">
+       <q-card-section>
+         <div class="text-subtitle1 text-info">
+           Click '+' to add an item.
+         </div>
+       </q-card-section>
+     </q-card>
      <q-card class="my-card q-mt-md q-pa-xs" v-if="items.length > 0">
       <q-card-section>
         <div class="text-subtitle2 text-info">Note: Slide right the item to remove or decrease it.</div>
@@ -44,12 +51,14 @@
 
       <q-card-actions align="left">
         <q-btn flat @click="clear">Clear</q-btn>
-        <q-btn flat>Print</q-btn>
+        <q-btn flat @click="preview">Preview</q-btn>
       </q-card-actions>
     </q-card>
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
       <q-btn fab icon="add" color="primary" @click="itemListDialog = true" />
     </q-page-sticky>
+    
+    <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" />
   </q-page>
 </template>
 
@@ -61,6 +70,7 @@ export default {
   data () {
     return {
       itemListDialog: false,
+      previewQuotationDialog: false,
       priceType: 'newPrice',
       items: [],
       totalNewPrice: 0,
@@ -75,8 +85,23 @@ export default {
     clearTimeout(this.timer)
   },
   computed: {
-    getItems () {
-      return this.items;
+    getPreviewItems () {
+      const previewItems = [];
+      _.forEach(this.items, item => {
+        previewItems.push({
+          itemName: item.details.itemName,
+          category: item.details.category,
+          description: item.details.description,
+          quantity: item.quantity,
+          price: this.getFormattedPrice(item),
+          amount: this.getAmount(item)
+        });
+      });
+      return {
+        items: previewItems,
+        totalPriceFormatted: this.getFormattedTotalPrice,
+        totalPrice: this.getTotalPrice
+      }
     },
     getFormattedTotalPrice () {
       return PESO(this.getTotalPrice).format();
@@ -117,8 +142,8 @@ export default {
         reset()
       }, 300)
     },
-    finish (data) {
-      console.log(data)
+    preview () {
+      this.previewQuotationDialog = true;
     },
     minusTotal(item) {
       this.totalNewPrice -= item.newPricing.price;
