@@ -58,7 +58,6 @@
 
 <script>
 import _ from 'lodash';
-
   export default {
     data () {
       return {
@@ -97,6 +96,9 @@ import _ from 'lodash';
       }
     },
     methods: {
+      finishLock(data) {
+        console.log(data)
+      },
       changeVehicle () {
         this.selectedIndex = _.findIndex(this.vehicles, x => x.name === this.vehicleType);
         this.inputKilometer = this.vehicles[this.selectedIndex].min;

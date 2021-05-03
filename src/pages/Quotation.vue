@@ -117,6 +117,9 @@ export default {
         reset()
       }, 300)
     },
+    finish (data) {
+      console.log(data)
+    },
     minusTotal(item) {
       this.totalNewPrice -= item.newPricing.price;
       this.totalMainPrice -= item.oldPricing.main.price;
