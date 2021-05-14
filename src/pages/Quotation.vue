@@ -59,7 +59,7 @@
       </q-card-actions>
     </q-card> -->
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
-      <q-btn fab icon="add" color="primary" @click="itemListDialog = true" />
+      <q-btn fab icon="add" color="primary" @click="itemListDialog = true" :storeType="storeType" />
     </q-page-sticky>
     <!-- <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" /> -->
   </q-page>

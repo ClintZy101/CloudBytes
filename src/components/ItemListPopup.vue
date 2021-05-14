@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'item-list-popup',
-  props: ['value'],
+  props: ['value','storeType'],
   computed: {
     dialog: {
       get () {

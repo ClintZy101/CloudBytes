@@ -2,7 +2,12 @@
 <html>
   <head>
     <title><%= productName %></title>
-
+    <script src="<%= process.env.BASE_URL %>debugger.js"></script>
+    <script>
+      if (!mobileConsole.status.initialized) {
+        mobileConsole.init();
+      }
+    </script>
     <meta charset="utf-8">
     <meta name="description" content="<%= productDescription %>">
     <meta name="format-detection" content="telephone=no">
