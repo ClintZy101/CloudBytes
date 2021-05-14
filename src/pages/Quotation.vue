@@ -5,11 +5,12 @@
         Make a Quotation
       </q-toolbar-title>
     </q-toolbar>
-    <item-list-popup v-model="itemListDialog" @item-select="itemSelect" />
+    <item-list-popup v-model="itemListDialog" :store-type="storeType" />
       <div class="q-gutter-sm q-mt-sm">
-        <q-radio v-model="storeType" val="tarlac" label="Tarlac Store" />
-        <q-radio v-model="storeType" val="rosales" label="Rosales Store" />
-        <q-radio v-model="storeType" val="talavera" label="Talavera Store" />
+        <!-- <div class="text-subtitle1"><q-icon size="md" name="store" /> Store</div> -->
+        <q-radio v-model="storeType" val="tarlac" label="Tarlac" />
+        <q-radio v-model="storeType" val="rosales" label="Rosales" />
+        <q-radio v-model="storeType" val="talavera" label="Talavera" />
       </div>
        <q-banner class="bg-green-2 text-black">
         <div class="text-weight-bold q-mb-sm">TIP</div>

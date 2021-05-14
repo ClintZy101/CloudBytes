@@ -75,7 +75,7 @@
                 headerText='Category'
               />
               <e-column
-                field='details.itemName'
+                field='details.item_name'
                 headerText='Item Name'
               />
               <e-column
@@ -103,13 +103,10 @@ import _ from 'lodash';
 import { Provide } from 'boot/syncfusion.js';
 import { PESO } from 'src/helpers/NumberFormat.js';
 import priceLevel from 'src/helpers/PriceLevel.js';
-import items from 'src/helpers/ItemsJsonHelper.js';
+import { getItems } from 'src/helpers/ItemsJsonHelper.js';
 import ReportItemDetails from 'components/ReportItemDetails.vue'
 
 export default {
-  provide: {
-    grid: Provide.Grid
-  },
   data () {
     return { 
       priceLevel,
@@ -128,7 +125,7 @@ export default {
         opacity: 0.2
       },
 
-      items,
+     items: getItems('tarlac'),
       searchQuery: '',
       filterOptions: {
         type: 'Menu',
@@ -141,7 +138,7 @@ export default {
         }
       },
       searchOptions: {
-        fields: ['details.category', 'details.itemName', 'details.description']
+        fields: ['details.category', 'details.item_name', 'details.description']
       },
       pageSettings: { pageSizes: true, pageSize: 15 },
       detailsTemplate: function () {
@@ -152,7 +149,7 @@ export default {
     }
   },
   methods: {
-    databound: function () { this.$refs.grid.autoFitColumns(['details.category', 'details.itemName', 'details.description', 'pricing.price']) },
+    databound: function () { this.$refs.grid.autoFitColumns(['details.category', 'details.item_name', 'details.description', 'pricing.price']) },
     formatToPeso: (num) => PESO(num).format(),
     formatToPercentage: (num) => Math.round(num * 100) + "%",
     valAccessorPrice: (field, data, column) => PESO(data.pricing.price).format(),
@@ -160,6 +157,9 @@ export default {
       this.searchQuery = ''
       this.$refs.grid.search(this.searchQuery);
     }
+  },
+  provide: {
+    grid: Provide.Grid
   }
 }
 </script>

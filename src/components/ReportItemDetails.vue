@@ -1,6 +1,6 @@
 <template>
  <div class="row">
-    <div class="col-2">
+    <div class="col-3">
       <div class="row">
         <div class="col q-ml-sm">
             <q-tree
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-3">
       <div class="row">
         <div class="col q-ml-sm">
             <q-tree
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-     <div class="col-2">
+     <div class="col-3">
       <div class="row">
         <div class="col q-ml-sm">
             <q-tree
@@ -49,12 +49,6 @@ export default {
       expanded: ['Main Store', 'Branch Store', 'Difference' ]
     }
   },
-  methods: {
-    round(num) {
-      var m = Number((Math.abs(num) * 100).toPrecision(15));
-      return (Math.round(m) / 100) * Math.sign(num);
-    }
-  },
   computed: {
     mainStore () {
       return [
@@ -63,7 +57,7 @@ export default {
           icon: 'business',
           children: [
             { label: 'Cost: ' + PESO(this.data.pricing.main_cost).format() },
-            { label: 'Markup: ' + (this.data.pricing.main_markup * 100) + '%' },
+            { label: 'Markup: ' + this.data.pricing.main_markup + '%' },
             { label: 'Interest: ' + PESO(this.data.pricing.main_interest).format() }
           ]
         }
@@ -76,7 +70,7 @@ export default {
           icon: 'store',
           children: [
             { label: 'Cost: ' + PESO(this.data.pricing.branch_cost).format() },
-            { label: 'Markup: ' + (this.data.pricing.branch_markup * 100) + '%' },
+            { label: 'Markup: ' + this.data.pricing.branch_markup + '%' },
             { label: 'Interest: ' + PESO(this.data.pricing.branch_interest).format() }
           ]
         }
@@ -89,7 +83,7 @@ export default {
           icon: 'insights',
           children: [
             { label: 'Cost: ' + PESO(this.data.difference.cost).format() },
-            { label: 'Markup: ' +  ((this.data.pricing.main_markup * 100) - (this.data.pricing.branch_markup * 100)) + '%' },
+            { label: 'Markup: ' +  this.data.difference.markup + '%' },
             { label: 'Interest: ' +  PESO(this.data.difference.interest).format() }
           ]
         }

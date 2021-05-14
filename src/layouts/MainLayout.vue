@@ -16,7 +16,7 @@
         </q-toolbar-title>
 
         <div>
-          v0.3
+          v0.4
         </div>
       </q-toolbar>
     </q-header>
