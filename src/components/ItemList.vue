@@ -49,18 +49,18 @@
             headerText='Item Name'
           />
           <e-column
+            field='pricing.price'
+            headerText='Price'
+            :allowFiltering='false'
+            :valueAccessor='VAOldMainPrice'
+            :customAttributes="{class: ['text-green-8','text-weight-bold']}"
+          />
+          <e-column
             field='details.description'
             :min-width="150"
             headerText='Description'
           />
-          <e-column
-            field='oldMainPrice'
-            headerText='Main Price'
-            :allowFiltering='false'
-            :valueAccessor='VAOldMainPrice'
-            :customAttributes="{class: 'text-red-8'}"
-          />
-          <e-column
+          <!-- <e-column
             field='oldBranchPrice'
             headerText='Branch Price'
             :allowFiltering='false'
@@ -80,7 +80,7 @@
             :allowFiltering='false'
             :customAttributes="{class: ['text-primary','text-weight-bold']}"
             :valueAccessor='VADifference'
-          />
+          /> -->
         </e-columns>
       </ejs-grid>
     </div>
@@ -141,22 +141,22 @@ export default {
       this.$refs.grid.search(this.searchQuery);
     },
     dataBound: function () {
-      this.$refs.grid.autoFitColumns(['details.category', 'details.itemName', 'details.description', 'oldMainPrice', 'oldBranchPrice', 'newPrice', 'difference']);
+      this.$refs.grid.autoFitColumns(['details.category', 'details.itemName', 'details.description', 'pricing.price']);
     },
     VAOldMainPrice (field, data, column) {
-      return PESO(data.oldPricing.main.price).format();
+      return PESO(data.pricing.price).format();
     },
-    VAOldBranchPrice (field, data, column) {
-      return PESO(data.oldPricing.branch.price).format();
-    },
-    VANewPrice (field, data, column) {
-      return PESO(data.newPricing.price).format();
-    },
-    VADifference (field, data, column) {
-      const main = PESO(data.newPricing.main.difference).format();
-      const branch = PESO(data.newPricing.branch.difference).format();
-      return main + ' | ' + branch;
-    }
+    // VAOldBranchPrice (field, data, column) {
+    //   return PESO(data.oldPricing.branch.price).format();
+    // },
+    // VANewPrice (field, data, column) {
+    //   return PESO(data.newPricing.price).format();
+    // },
+    // VADifference (field, data, column) {
+    //   const main = PESO(data.newPricing.main.difference).format();
+    //   const branch = PESO(data.newPricing.branch.difference).format();
+    //   return main + ' | ' + branch;
+    // }
   }
 }
 </script>
