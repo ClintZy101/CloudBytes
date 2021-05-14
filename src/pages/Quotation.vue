@@ -7,12 +7,16 @@
     </q-toolbar>
     <item-list-popup v-model="itemListDialog" @item-select="itemSelect" />
       <div class="q-gutter-sm q-mt-sm">
-        <q-radio v-model="priceType" val="newPrice" label="New Price" />
-        <q-radio v-model="priceType" val="mainPrice" label="Main Price" />
-        <q-radio v-model="priceType" val="branchPrice" label="Branch Price" />
+        <q-radio v-model="storeType" val="tarlac" label="Tarlac Store" />
+        <q-radio v-model="storeType" val="rosales" label="Rosales Store" />
+        <q-radio v-model="storeType" val="talavera" label="Talavera Store" />
       </div>
+       <q-banner class="bg-green-2 text-black">
+        <div class="text-weight-bold q-mb-sm">TIP</div>
+        When choosing a store will display the availability of an item.
+      </q-banner>
      <q-list bordered separator class="q-mt-md" v-for="item in items" :key="item.id">
-       <q-slide-item :id="item.id" @left="opt => removeItem(opt, item.id)" left-color="red" ref="slide">
+      <q-slide-item :id="item.id" @left="opt => removeItem(opt, item.id)" left-color="red" ref="slide">
         <template v-slot:left>
           <q-icon name="done" /> Removed
         </template>
@@ -39,7 +43,7 @@
          </div>
        </q-card-section>
      </q-card>
-     <q-card class="my-card q-mt-md q-pa-xs" v-if="items.length > 0">
+    <!-- <q-card class="my-card q-mt-md q-pa-xs" v-if="items.length > 0">
       <q-card-section>
         <div class="text-subtitle2 text-info">Note: Slide right the item to remove or decrease it.</div>
         <div class="text-subtitle1">Total Cost: <q-chip color="secondary" text-color="white">{{ getFormattedTotalCost }}</q-chip></div>
@@ -53,12 +57,11 @@
         <q-btn flat @click="clear">Clear</q-btn>
         <q-btn flat @click="preview">Preview</q-btn>
       </q-card-actions>
-    </q-card>
+    </q-card> -->
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
       <q-btn fab icon="add" color="primary" @click="itemListDialog = true" />
     </q-page-sticky>
-    
-    <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" />
+    <!-- <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" /> -->
   </q-page>
 </template>
 
@@ -71,7 +74,7 @@ export default {
     return {
       itemListDialog: false,
       previewQuotationDialog: false,
-      priceType: 'newPrice',
+      storeType: 'tarlac',
       items: [],
       totalNewPrice: 0,
       totalMainPrice: 0,
@@ -190,12 +193,12 @@ export default {
         const findIndex = _.findIndex(this.items, x => x.id === data.id);
         if (findIndex > -1) {
           this.items[findIndex].quantity++;
-          this.addTotal(this.items[findIndex]);
+          // this.addTotal(this.items[findIndex]);
           return;
         }
       } 
       data.quantity = 1;
-      this.addTotal(data);
+      // this.addTotal(data);
       this.items.push(data);
     },
     getPrice(item) {
@@ -218,7 +221,7 @@ export default {
       }
     },
     getFormattedCost(item) {
-      return PESO(this.getCost(item) * item.quantity).format();
+      // return PESO(this.getCost(item) * item.quantity).format();
     },
     getFormattedInterest(item) {
       const cost = this.getCost(item) * item.quantity;

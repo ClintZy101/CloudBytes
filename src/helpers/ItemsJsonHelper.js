@@ -1,4 +1,4 @@
-import inventory from "assets/inventory_v2.json";
+import inventory from "assets/inventory_tarlac.json";
 import priceLevel from "src/helpers/PriceLevel.js";
 import _ from "lodash";
 import { v4 as uuidv4 } from "uuid";
@@ -57,6 +57,7 @@ _.forEach(items, data => {
 
   formattedItems.push({
     id: uuidv4(),
+    available_quantity: data.Quantity,
     details: {
       category: data.Category,
       itemName: data.ItemName,

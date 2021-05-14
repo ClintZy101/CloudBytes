@@ -48,6 +48,11 @@
             field='details.itemName'
             headerText='Item Name'
           />
+          <!-- <e-column
+            field='available_quantity'
+            :min-width="20"
+            headerText='QTY'
+          /> -->
           <e-column
             field='pricing.price'
             headerText='Price'
@@ -57,7 +62,7 @@
           />
           <e-column
             field='details.description'
-            :min-width="150"
+            :min-width="130"
             headerText='Description'
           />
           <!-- <e-column
@@ -141,7 +146,7 @@ export default {
       this.$refs.grid.search(this.searchQuery);
     },
     dataBound: function () {
-      this.$refs.grid.autoFitColumns(['details.category', 'details.itemName', 'details.description', 'pricing.price']);
+      this.$refs.grid.autoFitColumns(['details.category', 'details.itemName', 'details.description', 'pricing.price','available_quantity']);
     },
     VAOldMainPrice (field, data, column) {
       return PESO(data.pricing.price).format();
