@@ -50,6 +50,8 @@
             :allowFiltering='true' 
             :filterSettings='filterOptions'
             :searchSettings='searchOptions'
+            :queryCellInfo='customiseCell'
+            :rowSelected="itemSelect"
           >
             <e-columns>
               <e-column
@@ -116,7 +118,12 @@ export default {
       searchOptions: {
         fields: ['details.category', 'details.item_name', 'details.description']
       },
-      pageSettings: { pageSizes: true, pageSize: 20 }
+      pageSettings: { pageSizes: true, pageSize: 10 }
+    }
+  },
+  watch: {
+    dialog (val) {
+      if (!val) this.searchQuery = '';
     }
   },
   computed: {
@@ -136,9 +143,38 @@ export default {
     }
   },
   methods: {
-    itemSelect: function(data) {
-      this.$emit('item-select', data);
-      this.dialog = false;
+    itemSelect: function(args) {
+      if (args.data !== undefined) {
+        if (args.data.available_items <= 0) {
+          this.$q.dialog({
+            title: 'Confirm',
+            message: 'This item is out of stock, would you like to continue?',
+            cancel: true,
+            persistent: true,
+            cancel: 'No',
+            ok: 'Yes'
+          }).onOk(() => {
+            this.$emit('item-select', args.data);
+            this.dialog = false;
+          }).onCancel(() => {
+            this.$refs.grid.clearSelection();
+          });
+        } else {
+          this.$emit('item-select', args.data);
+          this.dialog = false;
+        }
+      }
+    },
+    customiseCell: function(args) {
+      if (args.column.field === 'available_items') {
+        if (args.data['available_items'] <= 0) {
+          args.cell.classList.add('text-negative');
+          args.cell.classList.add('text-weight-bold');
+        } else {
+          args.cell.classList.add('text-positive');
+          args.cell.classList.add('text-weight-bold');
+        }
+      }
     },
     dataBound: function () {
       this.$refs.grid.autoFitColumns(['details.category', 'details.item_name', 'details.description', 'price','available_items']);
@@ -162,9 +198,14 @@ export default {
   resize: both;
   overflow: auto;
   padding: 0px;
-  height: 550px;
+  height: auto;
   width: 100%;
   min-height: 550px;
   min-width: 300px;
+}
+
+.below-stocks {
+  background-color: red;
+  color: white;
 }
 </style>

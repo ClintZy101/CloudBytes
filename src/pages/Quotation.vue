@@ -5,16 +5,15 @@
         Make a Quotation
       </q-toolbar-title>
     </q-toolbar>
-    <item-list-popup v-model="itemListDialog" :store-type="storeType" />
+    <item-list-popup v-model="itemListDialog" :store-type="storeType" @item-select="itemSelect" />
       <div class="q-gutter-sm q-mt-sm">
-        <!-- <div class="text-subtitle1"><q-icon size="md" name="store" /> Store</div> -->
-        <q-radio v-model="storeType" val="tarlac" label="Tarlac" />
-        <q-radio v-model="storeType" val="rosales" label="Rosales" />
-        <q-radio v-model="storeType" val="talavera" label="Talavera" />
+        <q-radio v-model="storeChange" val="Tarlac" label="Tarlac" @input="storeTypeChange" />
+        <q-radio v-model="storeChange" val="Rosales" label="Rosales" @input="storeTypeChange" />
+        <q-radio v-model="storeChange" val="Talavera" label="Talavera" @input="storeTypeChange" />
       </div>
        <q-banner class="bg-green-2 text-black">
         <div class="text-weight-bold q-mb-sm">TIP</div>
-        When choosing a store will display the availability of an item.
+        Choosing the right store will provide the correct information about the stocks of an item.
       </q-banner>
      <q-list bordered separator class="q-mt-md" v-for="item in items" :key="item.id">
       <q-slide-item :id="item.id" @left="opt => removeItem(opt, item.id)" left-color="red" ref="slide">
@@ -23,8 +22,8 @@
         </template>
         <q-item>
           <q-item-section>
-            <q-item-label lines="1">{{ item.details.itemName }}</q-item-label>
-            <q-item-label caption>{{ item.details.category }}</q-item-label>
+            <q-item-label lines="1">{{ item.details.item_name }}</q-item-label>
+            <q-item-label caption>{{ item.details.category }} <span class="text-negative text-caption"> &nbsp;{{ getStatus(item) }}</span></q-item-label>
             <q-item-label caption>Cost: {{ getFormattedCost(item) }} | Interest: {{ getFormattedInterest(item) }}</q-item-label>
           </q-item-section>
 
@@ -44,25 +43,23 @@
          </div>
        </q-card-section>
      </q-card>
-    <!-- <q-card class="my-card q-mt-md q-pa-xs" v-if="items.length > 0">
+    <q-card class="my-card q-mt-md q-pa-xs" v-if="items.length > 0">
       <q-card-section>
         <div class="text-subtitle2 text-info">Note: Slide right the item to remove or decrease it.</div>
         <div class="text-subtitle1">Total Cost: <q-chip color="secondary" text-color="white">{{ getFormattedTotalCost }}</q-chip></div>
         <div class="text-subtitle1">Total Price: <q-chip color="secondary" text-color="white">{{ getFormattedTotalPrice }}</q-chip></div>
         <div class="text-subtitle1">Total Interest: <q-chip color="secondary" text-color="white">{{ getTotalInterest }}</q-chip></div>
       </q-card-section>
-
       <q-separator />
-
       <q-card-actions align="left">
         <q-btn flat @click="clear">Clear</q-btn>
         <q-btn flat @click="preview">Preview</q-btn>
       </q-card-actions>
-    </q-card> -->
+    </q-card>
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
       <q-btn fab icon="add" color="primary" @click="itemListDialog = true" :storeType="storeType" />
     </q-page-sticky>
-    <!-- <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" /> -->
+    <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" />
   </q-page>
 </template>
 
@@ -75,17 +72,15 @@ export default {
     return {
       itemListDialog: false,
       previewQuotationDialog: false,
-      storeType: 'rosales',
+      storeChange: 'Tarlac',
+      storeType: 'Tarlac',
       items: [],
-      totalNewPrice: 0,
-      totalMainPrice: 0,
-      totalBranchPrice: 0,
-      totalMainCost: 0,
-      totalBranchCost: 0,
+      totalCost: 0,
+      totalPrice: 0,
       totalInterest: 0
     }
   },
-   beforeDestroy () {
+  beforeDestroy () {
     clearTimeout(this.timer)
   },
   computed: {
@@ -93,7 +88,7 @@ export default {
       const previewItems = [];
       _.forEach(this.items, item => {
         previewItems.push({
-          itemName: item.details.itemName,
+          item_name: item.details.item_name,
           category: item.details.category,
           description: item.details.description,
           quantity: item.quantity,
@@ -103,44 +98,40 @@ export default {
       });
       return {
         items: previewItems,
-        totalPriceFormatted: this.getFormattedTotalPrice,
-        totalPrice: this.getTotalPrice
+        totalPrice: this.totalPrice,
+        formattedTotalPrice: this.getFormattedTotalPrice
       }
     },
     getFormattedTotalPrice () {
-      return PESO(this.getTotalPrice).format();
+      return PESO(this.totalPrice).format();
     },
     getFormattedTotalCost () {
-      return PESO(this.getTotalCost).format();
-    },
-    getTotalPrice () {
-      switch(this.priceType) {
-        case 'newPrice':
-          return this.totalNewPrice;
-        case 'mainPrice':
-          return this.totalMainPrice;
-        case 'branchPrice':
-          return this.totalBranchPrice;
-        default:
-          return 0;
-      }
-    },
-    getTotalCost () {
-      switch(this.priceType) {
-        case 'newPrice':
-        case 'mainPrice':
-          return this.totalMainCost;
-        case 'branchPrice':
-          return this.totalBranchCost;
-        default:
-          return 0;
-      }
+      return PESO(this.totalCost).format();
     },
     getTotalInterest () {
-      return PESO(this.getTotalPrice - this.getTotalCost).format();
+      return PESO(this.totalPrice - this.totalCost).format();
     }
   },
   methods: {
+    storeTypeChange (value, evt) {
+      if (this.items.length > 0) {
+        this.$q.dialog({
+          title: 'Confirm',
+          message: 'If you change the Store type, it will automatically clear the items. Would you like to continue?',
+          cancel: true,
+          persistent: true,
+          cancel: 'No',
+          ok: 'Yes'
+        }).onOk(() => {
+          this.items = [];
+          this.storeType = value;
+        }).onCancel(() => {
+          this.storeChange = this.storeType;
+        });
+      } else {
+        this.storeType = value;
+      }
+    },
     finalize (reset) {
       this.timer = setTimeout(() => {
         reset()
@@ -150,20 +141,12 @@ export default {
       this.previewQuotationDialog = true;
     },
     minusTotal(item) {
-      this.totalNewPrice -= item.newPricing.price;
-      this.totalMainPrice -= item.oldPricing.main.price;
-      this.totalBranchPrice -= item.oldPricing.branch.price;
-
-      this.totalMainCost -= item.oldPricing.main.cost;
-      this.totalBranchCost -= item.oldPricing.branch.cost;
+      this.totalCost -= item.cost;
+      this.totalPrice -= item.price;
     },
     addTotal(item) {
-      this.totalNewPrice += item.newPricing.price;
-      this.totalMainPrice += item.oldPricing.main.price;
-      this.totalBranchPrice += item.oldPricing.branch.price;
-
-      this.totalMainCost += item.oldPricing.main.cost;
-      this.totalBranchCost += item.oldPricing.branch.cost;
+      this.totalCost += item.cost;
+      this.totalPrice += item.price;
     },
     removeItem ({ reset }, id) {
       if (this.items.length > 0) {
@@ -182,59 +165,41 @@ export default {
     },
     clear () {
       this.items = [];
-      this.totalNewPrice = 0;
-      this.totalMainPrice = 0;
-      this.totalBranchPrice = 0;
-      this.totalMainCost = 0;
-      this.totalBranchCost = 0;
-      this.totalInterest = 0;
+      this.totalCost = 0;
+      this.totalPrice = 0;
     },
     itemSelect(data) {
       if (this.items.length > 0) {
         const findIndex = _.findIndex(this.items, x => x.id === data.id);
         if (findIndex > -1) {
           this.items[findIndex].quantity++;
-          // this.addTotal(this.items[findIndex]);
+          this.addTotal(this.items[findIndex]);
           return;
         }
       } 
       data.quantity = 1;
-      // this.addTotal(data);
+      this.addTotal(data);
       this.items.push(data);
     },
-    getPrice(item) {
-      switch(this.priceType) {
-        case 'newPrice':
-          return item.newPricing.price;
-        case 'mainPrice':
-          return item.oldPricing.main.price;
-        case 'branchPrice':
-          return item.oldPricing.branch.price;
-      }
-    },
-    getCost(item) {
-      switch(this.priceType) {
-        case 'newPrice':
-        case 'mainPrice':
-          return item.oldPricing.main.cost;
-        case 'branchPrice':
-          return item.oldPricing.branch.cost;
-      }
-    },
     getFormattedCost(item) {
-      // return PESO(this.getCost(item) * item.quantity).format();
+      return PESO(item.cost * item.quantity).format();
     },
     getFormattedInterest(item) {
-      const cost = this.getCost(item) * item.quantity;
-      const price = this.getPrice(item) * item.quantity;
+      const cost = item.cost * item.quantity;
+      const price = item.price * item.quantity;
       return PESO(price - cost).format();
     },
     getFormattedPrice(item) {
-      return PESO(this.getPrice(item)).format();
+      return PESO(item.price).format();
     },
     getAmount(item) {
-      const price = this.getPrice(item);
-      return PESO(price * item.quantity).format();
+      return PESO(item.price * item.quantity).format();
+    },
+    getStatus(item) {
+      if (item.available_items > 0 && item.available_items < item.quantity)
+        return `(only ${item.available_items} available)`;
+      else if (item.available_items <= 0)
+        return '(out of stock)';
     }
   },
 }

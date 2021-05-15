@@ -125,7 +125,7 @@ export default {
         opacity: 0.2
       },
 
-     items: getItems('tarlac'),
+     items: getItems('Tarlac'),
       searchQuery: '',
       filterOptions: {
         type: 'Menu',

@@ -7,13 +7,15 @@
   >
     <q-card>
       <q-card-section class="row items-center q-pb-none">
-        <div class="text-h6">Preview Quotation</div>
-        <q-space />
-        <q-btn icon="close" flat round dense v-close-popup />
+        <div class="row col-12">
+          <div class="text-h6">Preview Quotation</div>
+          <q-space />
+          <q-btn icon="close" flat round dense v-close-popup />
+        </div>
         <div class="q-gutter-sm q-pa-xs">
-        <q-radio v-model="detailsType" val="summary" label="Summary" />
-        <q-radio v-model="detailsType" val="detailed" label="Detailed" />
-      </div>
+          <q-radio v-model="detailsType" val="summary" label="Summary" />
+          <q-radio v-model="detailsType" val="detailed" label="Detailed" />
+        </div>
       </q-card-section>
       <q-card-section>
         <q-list bordered>
@@ -42,7 +44,7 @@
             </q-input>
           </div>
           <div class="col-7">
-            <div class="text-subtitle1">Subtotal: <q-chip color="primary" text-color="white">{{ data.totalPriceFormatted }}</q-chip></div>
+            <div class="text-subtitle1">Subtotal: <q-chip color="primary" text-color="white">{{ data.formattedTotalPrice }}</q-chip></div>
             <div class="text-subtitle1">Total: <q-chip color="primary" text-color="white">{{ getTotal }}</q-chip></div>
           </div>
         </div>
@@ -72,7 +74,7 @@ export default {
     },
     getTotal () {
       if (this.discount === null || this.discount === '' || this.discount === 0)
-      return this.data.totalPriceFormatted;
+      return this.data.formattedTotalPrice;
       else {
         return PESO(this.data.totalPrice - this.discount).format();
       }
@@ -81,7 +83,7 @@ export default {
   methods: {
     getDetails(item) {
       if (this.detailsType === 'summary')
-        return item.itemName;
+        return item.item_name;
       else return item.description;
     }
   },

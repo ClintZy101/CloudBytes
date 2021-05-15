@@ -14,9 +14,9 @@
         <q-toolbar-title>
           Cloud Bytes App
         </q-toolbar-title>
-
-        <div>
-          v0.4
+         <q-btn flat round color="grey-3" :icon="getFullScreenIcon" @click="fullScreen" />
+        <div class="q-ml-md">
+          v0.5
         </div>
       </q-toolbar>
     </q-header>
@@ -55,11 +55,12 @@
 </template>
 
 <script>
-
+import { AppFullscreen } from 'quasar'
   export default {
     name: 'MainLayout',
     data () {
       return {
+        isFullScreen: false,
         leftDrawerOpen: false,
         activeMenu: 'shipping',
         menus: [{
@@ -80,6 +81,25 @@
             label: 'Quotations',
             to: 'quotation'
           }]
+      }
+    },
+    computed: {
+      getFullScreenIcon() {
+        if (this.isFullScreen) return 'fullscreen_exit';
+        else return 'fullscreen'
+      }
+    },
+    methods: {
+      fullScreen () {
+        if (!this.isFullScreen){
+          AppFullscreen.request()
+            .then(() => this.isFullScreen = true)
+            .catch(err => this.isFullScreen = false);
+        } else {
+          AppFullscreen.exit()
+            .then(() => this.isFullScreen = false)
+            .catch(err => this.isFullScreen = false);
+        }
       }
     }
   }
