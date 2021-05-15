@@ -12,9 +12,14 @@
           <q-space />
           <q-btn icon="close" flat round dense v-close-popup />
         </div>
-        <div class="q-gutter-sm q-pa-xs">
-          <q-radio v-model="detailsType" val="summary" label="Summary" />
-          <q-radio v-model="detailsType" val="detailed" label="Detailed" />
+        <div class="row q-col-gutter-md">
+          <div class="col-md-6 col-lg-6">
+            <q-radio v-model="detailsType" val="summary" label="Summary" />
+            <q-radio v-model="detailsType" val="detailed" label="Detailed" />
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <q-btn flat icon="content_copy" label="Copy to clipboard" @click="copyToClipboard" class="full-width" />
+          </div>
         </div>
       </q-card-section>
       <q-card-section>
@@ -55,6 +60,7 @@
 
 <script>
 import { PESO } from 'src/helpers/NumberFormat.js';
+import { copyToClipboard } from 'quasar';
 
 export default {
   name: 'preview-quotation',
@@ -85,7 +91,29 @@ export default {
       if (this.detailsType === 'summary')
         return item.item_name;
       else return item.description;
-    }
+    },
+    copyToClipboard () {
+      let output = '';
+      if (this.data !== null && this.data.items.length > 0) {
+        this.data.items.forEach(item => {
+          const itemName = this.detailsType === 'summary' ? item.item_name : item.description;
+          output += `(${item.category.toUpperCase()}) ${itemName}\n${item.quantity} x ${item.amount}\n\n`;
+        });
+        output += `\n------------------------------\nSubtotal: ${this.data.formattedTotalPrice}\nDiscount: ${PESO(this.discount).format()}\nTotal: ${this.getTotal}`
+        copyToClipboard(output)
+          .then(() => {
+            this.$q.notify({
+              message: 'Copied to clipboard'
+            });
+          })
+          .catch(() => {
+            this.$q.notify({
+              message: 'Unable to copy',
+              color: 'warning'
+            });
+          });
+      }
+    },
   },
   data () {
     return {
