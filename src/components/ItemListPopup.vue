@@ -1,6 +1,7 @@
 <template>
   <q-dialog
     v-model="dialog"
+    maximized
     transition-show="slide-up"
     transition-hide="slide-down"
   >
@@ -15,10 +16,10 @@
           <div class="text-weight-bold q-mb-sm text-secondary">INFO</div>
           <div class="row">
             <div class="col-6">
-              <q-icon name="store" size="sm" /> Tarlac
+              <q-icon name="store" size="sm" /> {{ store }}
             </div>
             <div class="col-6">
-              Total Items: <b>4</b>
+              Total Items: <b>{{ getItems.length }}</b>
             </div>
           </div>
         </q-banner>
@@ -35,17 +36,17 @@
             </template>
           </q-input>
         </div>
-        <div class="e-resizable q-mt-xs">
+        <div class="e-resizable">
           <ejs-grid
             class="q-pt-md"
             ref="grid"
             :dataSource="getItems"
             :allowTextWrap='true'
-            :dataBound="databound"
+            :dataBound="dataBound"
             :allowPaging="true"
             :pageSettings='pageSettings'
             :enableHover="false"
-            :allowSelection="false"
+            :allowSelection="true"
             :allowFiltering='true' 
             :filterSettings='filterOptions'
             :searchSettings='searchOptions'
@@ -58,19 +59,24 @@
                 :visible='false'
               />
               <e-column
-                field='details.category'
-                headerText='Category'
-              />
-              <e-column
-                field='details.itemName'
+                field='details.item_name'
                 headerText='Item Name'
               />
               <e-column
-                field='pricing.price'
+                field="available_items"
+                headerText='Stocks'
+                :allowFiltering='false'
+              />
+              <e-column
+                field="price"
                 headerText='Price'
                 :allowFiltering='false'
                 :valueAccessor='valAccessorPrice'
                 :customAttributes="{class: ['text-green-8','text-weight-bold']}"
+              />
+              <e-column
+                field='details.category'
+                headerText='Category'
               />
               <e-column
                 field='details.description'
@@ -87,13 +93,32 @@
 </template>
 
 <script>
-import inv_tarlac from 'assets/inventory_tarlac.json';
-import inv_talavera from 'assets/inventory_talavera.json';
-import inv_rosales from 'assets/inventory_rosales.json';
+import { getItems } from 'src/helpers/ItemsJsonHelper.js';
+import { Provide } from 'boot/syncfusion.js';
+import { PESO } from 'src/helpers/NumberFormat.js';
 
 export default {
   name: 'item-list-popup',
   props: ['value','storeType'],
+  data () {
+    return {
+      searchQuery: '',
+      filterOptions: {
+        type: 'Menu',
+        operators: {
+          stringOperator: [
+            { value: 'contains', text: 'Contains' },
+            { value: 'startsWith', text: 'Starts With' },
+            { value: 'endsWith', text: 'Ends With' },
+          ],
+        }
+      },
+      searchOptions: {
+        fields: ['details.category', 'details.item_name', 'details.description']
+      },
+      pageSettings: { pageSizes: true, pageSize: 20 }
+    }
+  },
   computed: {
     dialog: {
       get () {
@@ -104,23 +129,30 @@ export default {
       }
     },
     getItems () {
-      switch(this.storeType) {
-        case 'tarlac':
-          return inv_tarlac.Items;
-        case 'talavera':
-          return inv_talavera.Items;
-        case 'rosales':
-          return inv_rosales.Items;
-        default:
-          return [];
-      }
+      return getItems(this.storeType);
+    },
+    store () {
+      return this.storeType.toUpperCase();
     }
   },
   methods: {
     itemSelect: function(data) {
       this.$emit('item-select', data);
       this.dialog = false;
+    },
+    dataBound: function () {
+      this.$refs.grid.autoFitColumns(['details.category', 'details.item_name', 'details.description', 'price','available_items']);
+    },
+    valAccessorPrice: function (field, data, column) {
+      return PESO(data.price).format();
+    },
+    clearSearch: function () {
+      this.searchQuery = ''
+      this.$refs.grid.search(this.searchQuery);
     }
+  },
+  provide: {
+    grid: Provide.Grid
   }
 }
 </script>
@@ -129,8 +161,8 @@ export default {
 .e-resizable {
   resize: both;
   overflow: auto;
-  padding: 5px;
-  height: 300;
+  padding: 0px;
+  height: 550px;
   width: 100%;
   min-height: 550px;
   min-width: 300px;

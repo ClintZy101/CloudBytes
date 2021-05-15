@@ -75,7 +75,7 @@ export default {
     return {
       itemListDialog: false,
       previewQuotationDialog: false,
-      storeType: 'tarlac',
+      storeType: 'rosales',
       items: [],
       totalNewPrice: 0,
       totalMainPrice: 0,

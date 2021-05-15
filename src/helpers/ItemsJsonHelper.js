@@ -20,7 +20,7 @@ function getDetails(data) {
   }
 }
 
-const parseToNum = num => Number(num.replace(/[^0-9.-]+/g, ""));
+const parseToNum = num => Number(num.toString().replace(/[^0-9.-]+/g, ""));
 const markup = (price, cost) => ((price - cost) / cost) * 100;
 const interest = (price, cost) => price - cost;
 
@@ -51,6 +51,10 @@ export function getItems (storeType) {
         id: uuidv4(),
         available_items: data.Quantity,
         details: getDetails(data),
+        price: getPrice(data),
+        cost: getCost(data),
+        markup: getMarkup(data),
+        interest: getInterest(data),
         pricing: {
           price: getPrice(data),
           main_cost: getCost(data),
@@ -67,6 +71,23 @@ export function getItems (storeType) {
         }
       });
     });
+  } else {
+    let inv_items = null;
+    if (storeType === 'rosales') inv_items = rosales.Items;
+    if (storeType === 'talavera') inv_items = talavera.Items;
+    if (inv_items !== null) {
+      inv_items.forEach(data => {
+        items.push({
+          id: uuidv4(),
+          available_items: data.Quantity,
+          details: getDetails(data),
+          price: getPrice(data),
+          cost: getCost(data),
+          markup: getMarkup(data),
+          interest: getInterest(data)
+        });
+      });
+    }
   }
   
   return items;
