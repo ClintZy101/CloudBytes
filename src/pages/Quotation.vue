@@ -52,32 +52,53 @@
       </q-card-section>
       <q-separator />
       <q-card-actions align="left">
-        <q-btn flat @click="clear">Clear</q-btn>
+        <q-btn color="primary" style="width: 100px" @click="saveQuotation">Save</q-btn>
         <q-btn flat @click="preview">Preview</q-btn>
+        <q-btn flat @click="clear">Clear</q-btn>
       </q-card-actions>
     </q-card>
-    <q-page-sticky position="bottom-right" :offset="[18, 18]">
-      <q-btn fab icon="add" color="primary" @click="itemListDialog = true" :storeType="storeType" />
+    <q-page-sticky position="bottom-right" :offset="fabPos">
+     <q-fab color="primary" persistent v-model="fab" icon="keyboard_arrow_up" direction="up" v-touch-pan.prevent.mouse="moveFab">
+       <q-fab-action color="secondary" @click="savedQuotationsDialog = true" icon="library_books" external-label label-class="bg-grey-3 text-grey-8" label-position="left" label="Quotations" />
+       <q-fab-action color="secondary" @click="itemListDialog = true" icon="add" external-label label-class="bg-grey-3 text-grey-8" label-position="left" label="Add Item/s" />
+      </q-fab>
     </q-page-sticky>
     <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" />
+    <saved-quotations v-model="savedQuotationsDialog" />
   </q-page>
 </template>
 
 <script>
 import { PESO } from 'src/helpers/NumberFormat.js';
 import _ from 'lodash';
+import { v4 as uuidv4 } from "uuid";
 
 export default {
   data () {
     return {
+      fab: true,
+      fabPos: [ 18, 18 ],
+      draggingFab: false,
       itemListDialog: false,
       previewQuotationDialog: false,
+      savedQuotationsDialog: false,
       storeChange: 'Tarlac',
       storeType: 'Tarlac',
       items: [],
       totalCost: 0,
-      totalPrice: 0,
-      totalInterest: 0
+      totalPrice: 0
+    }
+  },
+  watch: {
+    itemListDialog (val) {
+      if (val === false) {
+        this.fab = true;
+      }
+    },
+    savedQuotationsDialog (val) {
+      if (val === false) {
+        this.fab = true;
+      }
     }
   },
   beforeDestroy () {
@@ -113,6 +134,44 @@ export default {
     }
   },
   methods: {
+    saveQuotation () {
+      this.$q.dialog({
+        title: 'Save Quotation',
+        message: 'Customer Name / Remarks <br /><span class="text-info">(minimum of 5 characters)</span><br /><br /> <span class="text-caption text-grey-6">Eg. Izuku Midoriya, Ryzen 5 3400G Package, White Build</span>',
+        html: true,
+        prompt: {
+          model: '',
+          isValid: val => val.length >= 5, // << here is the magic
+          type: 'text' // optional
+        },
+        cancel: true,
+        persistent: true
+      }).onOk(data => {
+        const id = uuidv4();
+        const quote = {
+          id,
+          quote_name: data,
+          items: this.items,
+          store_type: this.storeType,
+          total_cost: this.totalCost,
+          total_price: this.totalPrice
+        }
+        const json = JSON.stringify(quote);
+        localStorage.setItem(`quote:${id}`, json);
+        this.$q.notify({
+          type: 'positive',
+          message: `Quote '${data}' has been saved.`
+        });
+      })
+    },
+    moveFab (ev) {
+      this.draggingFab = ev.isFirst !== true && ev.isFinal !== true
+
+      this.fabPos = [
+        this.fabPos[0] - ev.delta.x,
+        this.fabPos[1] - ev.delta.y
+      ]
+    },
     storeTypeChange (value, evt) {
       if (this.items.length > 0) {
         this.$q.dialog({
@@ -123,8 +182,8 @@ export default {
           cancel: 'No',
           ok: 'Yes'
         }).onOk(() => {
-          this.items = [];
           this.storeType = value;
+          this.clear();
         }).onCancel(() => {
           this.storeChange = this.storeType;
         });
