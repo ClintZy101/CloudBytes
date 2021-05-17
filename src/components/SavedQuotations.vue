@@ -15,7 +15,6 @@
        
       </q-card-section>
       <q-card-actions>
-        <q-btn label="Clear" @click="clear" />
       </q-card-actions>
     </q-card>
   </q-dialog>

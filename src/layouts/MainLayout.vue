@@ -14,6 +14,7 @@
         <q-toolbar-title>
           Cloud Bytes App
         </q-toolbar-title>
+         <q-btn flat round color="grey-3" icon="lock" @click="lock" />
          <q-btn flat round color="grey-3" :icon="getFullScreenIcon" @click="fullScreen" />
         <div class="q-ml-md">
           v0.5
@@ -90,6 +91,10 @@ import { AppFullscreen } from 'quasar'
       }
     },
     methods: {
+      lock () {
+        localStorage.setItem('pattern-lock', null)
+        this.$router.replace('/pattern-lock');
+      },
       fullScreen () {
         if (!this.isFullScreen){
           AppFullscreen.request()
