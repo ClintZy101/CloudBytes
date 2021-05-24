@@ -12,7 +12,13 @@
         <q-btn icon="close" flat round dense v-close-popup />
       </q-card-section>
       <q-card-section>
-       
+       <q-banner class="bg-green-2 text-black">
+        <div class="text-weight-bold q-mb-sm">On Working...</div>
+        This section is under development. <br />
+        But the quote is automatically saved to your device. <br />
+        Try to make a quote and then refresh the page or close the app and then come back again,
+        you will see your quotation again. 
+      </q-banner>
       </q-card-section>
       <q-card-actions>
       </q-card-actions>

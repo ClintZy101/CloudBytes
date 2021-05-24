@@ -45,14 +45,14 @@
      </q-card>
     <q-card class="my-card q-mt-md q-pa-xs" v-if="items.length > 0">
       <q-card-section>
-        <div class="text-subtitle2 text-info">Note: Slide right the item to remove or decrease it.</div>
+        <div class="text-subtitle2 text-info">Note: Slide right the item to remove or decrease the quantity.</div>
         <div class="text-subtitle1">Total Cost: <q-chip color="secondary" text-color="white">{{ getFormattedTotalCost }}</q-chip></div>
         <div class="text-subtitle1">Total Price: <q-chip color="secondary" text-color="white">{{ getFormattedTotalPrice }}</q-chip></div>
         <div class="text-subtitle1">Total Interest: <q-chip color="secondary" text-color="white">{{ getTotalInterest }}</q-chip></div>
       </q-card-section>
       <q-separator />
       <q-card-actions align="left">
-        <q-btn color="primary" style="width: 100px" @click="saveQuotation">Save</q-btn>
+        <!-- <q-btn color="primary" style="width: 100px" @click="saveQuotation">Save</q-btn> -->
         <q-btn flat @click="preview">Preview</q-btn>
         <q-btn flat @click="clear">Clear</q-btn>
       </q-card-actions>
@@ -87,6 +87,16 @@ export default {
       items: [],
       totalCost: 0,
       totalPrice: 0
+    }
+  },
+  async mounted () {
+    const quote = await this.$store.dispatch('fetchQuote');
+    if (quote) {
+      this.storeType = quote.storeType;
+      this.storeChange = quote.storeType;
+      this.items = quote.items;
+      this.totalCost = quote.totalCost;
+      this.totalPrice = quote.totalPrice;
     }
   },
   watch: {
@@ -135,6 +145,7 @@ export default {
   },
   methods: {
     saveQuotation () {
+      return;
       this.$q.dialog({
         title: 'Save Quotation',
         message: 'Customer Name / Remarks <br /><span class="text-info">(minimum of 5 characters)</span><br /><br /> <span class="text-caption text-grey-6">Eg. Izuku Midoriya, Ryzen 5 3400G Package, White Build</span>',
@@ -156,8 +167,7 @@ export default {
           total_cost: this.totalCost,
           total_price: this.totalPrice
         }
-        const json = JSON.stringify(quote);
-        localStorage.setItem(`quote:${id}`, json);
+        // this.$store.dispatch('saveQuote', quote);
         this.$q.notify({
           type: 'positive',
           message: `Quote '${data}' has been saved.`
@@ -220,25 +230,38 @@ export default {
           this.$forceUpdate(); 
           this.finalize(reset);
         }
+        this.saveQuote();
       }
     },
     clear () {
       this.items = [];
       this.totalCost = 0;
       this.totalPrice = 0;
+      this.$store.dispatch('clearQuote');
+    },
+    saveQuote() {
+      const data = {
+        items: this.items,
+        storeType: this.storeType,
+        totalCost: this.totalCost,
+        totalPrice: this.totalPrice
+      };
+      this.$store.dispatch('saveQuote', data);
     },
     itemSelect(data) {
       if (this.items.length > 0) {
-        const findIndex = _.findIndex(this.items, x => x.id === data.id);
+        const findIndex = _.findIndex(this.items, x => x.details.item_name === data.details.item_name);
         if (findIndex > -1) {
           this.items[findIndex].quantity++;
           this.addTotal(this.items[findIndex]);
+          this.saveQuote();
           return;
         }
       } 
       data.quantity = 1;
       this.addTotal(data);
       this.items.push(data);
+      this.saveQuote();
     },
     getFormattedCost(item) {
       return PESO(item.cost * item.quantity).format();
