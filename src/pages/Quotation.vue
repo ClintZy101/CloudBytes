@@ -11,9 +11,9 @@
         <q-radio v-model="storeChange" val="Rosales" label="Rosales" @input="storeTypeChange" />
         <q-radio v-model="storeChange" val="Talavera" label="Talavera" @input="storeTypeChange" />
       </div>
-       <q-banner class="bg-green-2 text-black">
+       <q-banner class="bg-green-2 text-black" v-if="getTips !== null">
         <div class="text-weight-bold q-mb-sm">TIP</div>
-        Choosing the right store will provide the correct information about the stocks of an item.
+          {{ getTips.store }} Store Price List have been updated since <b>{{ getTips.updated }}</b>
       </q-banner>
      <q-list bordered separator class="q-mt-md" v-for="item in items" :key="item.id">
       <q-slide-item :id="item.id" @left="opt => removeItem(opt, item.id)" left-color="red" ref="slide">
@@ -141,6 +141,27 @@ export default {
     },
     getTotalInterest () {
       return PESO(this.totalPrice - this.totalCost).format();
+    },
+    getTips () {
+      switch (this.storeChange) {
+        case "Tarlac": 
+          return {
+            store: 'Tarlac',
+            updated: 'May 29, 2021'
+          }
+        case "Rosales":
+          return {
+            store: 'Rosales',
+            updated: 'May 29, 2021'
+          }
+        case "Talavera":
+          return {
+            store: 'Talavera',
+            updated: 'May 29, 2021'
+          }
+        default:
+          return null;
+      }
     }
   },
   methods: {

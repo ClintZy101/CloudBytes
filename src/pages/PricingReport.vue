@@ -6,6 +6,7 @@
       </q-toolbar-title>
     </q-toolbar>
     <div class="q-pa-md">
+      <div class="text-secondary text-h6">Price level</div>
       <q-scroll-area
         :thumb-style="thumbStyle"
         :bar-style="barStyle"
@@ -30,9 +31,34 @@
           </tbody>
         </q-markup-table>
       </q-scroll-area>
+      <div class="text-secondary text-h6">Branch Cost level</div>
+      <q-scroll-area
+        :thumb-style="thumbStyle"
+        :bar-style="barStyle"
+        style="height: 200px; width: 100%;"
+      >
+        <q-markup-table>
+          <thead>
+            <tr>
+              <th class="text-left">Level</th>
+              <th class="text-center">Min</th>
+              <th class="text-center">Max</th>
+              <th class="text-center">Markup</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(price, i) in branchCostLevel" :key="i">
+              <td class="text-left">Level {{ i + 1 }}</td>
+              <td class="text-center">{{ formatToPeso(price.min) }}</td>
+              <td class="text-center">{{ formatToPeso(price.max) }}</td>
+              <td class="text-center">{{ formatToPercentage(price.markup) }}</td>
+            </tr>
+          </tbody>
+        </q-markup-table>
+      </q-scroll-area>
       <q-banner class="bg-green-2 text-black q-mt-md q-mb-sm">
         <div class="text-weight-bold q-mb-sm text-secondary">INFO</div>
-          Items and pricing have been updated since May 14, 2021. <br />
+          Items and pricing have been updated since May 29, 2021. <br />
           If there is a new update of items and pricing. Contact the developer and send a backup of quickbooks.
       </q-banner>
       <div id="item-list">
@@ -103,6 +129,7 @@ import _ from 'lodash';
 import { Provide } from 'boot/syncfusion.js';
 import { PESO } from 'src/helpers/NumberFormat.js';
 import priceLevel from 'src/helpers/PriceLevel.js';
+import branchCostLevel from 'src/helpers/BranchCostLevel.js';
 import { getItems } from 'src/helpers/ItemsJsonHelper.js';
 import ReportItemDetails from 'components/ReportItemDetails.vue'
 
@@ -110,6 +137,7 @@ export default {
   data () {
     return { 
       priceLevel,
+      branchCostLevel,
       thumbStyle: {
         right: '4px',
         borderRadius: '5px',
