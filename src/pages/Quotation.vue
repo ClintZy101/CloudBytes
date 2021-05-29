@@ -52,7 +52,7 @@
       </q-card-section>
       <q-separator />
       <q-card-actions align="left">
-        <!-- <q-btn color="primary" style="width: 100px" @click="saveQuotation">Save</q-btn> -->
+        <q-btn color="primary" style="width: 100px" @click="saveQuotation">Save</q-btn>
         <q-btn flat @click="preview">Preview</q-btn>
         <q-btn flat @click="clear">Clear</q-btn>
       </q-card-actions>
@@ -64,7 +64,7 @@
       </q-fab>
     </q-page-sticky>
     <preview-quotation v-model="previewQuotationDialog" :data="getPreviewItems" />
-    <saved-quotations v-model="savedQuotationsDialog" />
+    <saved-quotations v-model="savedQuotationsDialog" @show-quote="showQuote" />
   </q-page>
 </template>
 
@@ -147,7 +147,7 @@ export default {
         case "Tarlac": 
           return {
             store: 'Tarlac',
-            updated: 'May 29, 2021'
+            updated: 'May 14, 2021'
           }
         case "Rosales":
           return {
@@ -165,8 +165,17 @@ export default {
     }
   },
   methods: {
+    showQuote (quote) {
+      const copy = JSON.parse(JSON.stringify(quote));
+      this.storeChange = copy.store_type;
+      this.storeType = copy.store_type;
+      this.totalCost = copy.total_cost;
+      this.totalPrice = copy.total_price;
+      this.items = copy.items;
+      this.saveQuote();
+      this.savedQuotationsDialog = false;
+    },
     saveQuotation () {
-      return;
       this.$q.dialog({
         title: 'Save Quotation',
         message: 'Customer Name / Remarks <br /><span class="text-info">(minimum of 5 characters)</span><br /><br /> <span class="text-caption text-grey-6">Eg. Izuku Midoriya, Ryzen 5 3400G Package, White Build</span>',
@@ -179,16 +188,16 @@ export default {
         cancel: true,
         persistent: true
       }).onOk(data => {
-        const id = uuidv4();
         const quote = {
-          id,
+          id: uuidv4(),
           quote_name: data,
+          date: new Date(),
           items: this.items,
           store_type: this.storeType,
           total_cost: this.totalCost,
           total_price: this.totalPrice
         }
-        // this.$store.dispatch('saveQuote', quote);
+        this.$store.dispatch('addQuote', quote);
         this.$q.notify({
           type: 'positive',
           message: `Quote '${data}' has been saved.`

@@ -58,7 +58,7 @@
       </q-scroll-area>
       <q-banner class="bg-green-2 text-black q-mt-md q-mb-sm">
         <div class="text-weight-bold q-mb-sm text-secondary">INFO</div>
-          Items and pricing have been updated since May 29, 2021. <br />
+          Items and pricing have been updated since May 14, 2021. <br />
           If there is a new update of items and pricing. Contact the developer and send a backup of quickbooks.
       </q-banner>
       <div id="item-list">
