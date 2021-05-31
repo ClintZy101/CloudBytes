@@ -147,7 +147,7 @@ export default {
         case "Tarlac": 
           return {
             store: 'Tarlac',
-            updated: 'May 14, 2021'
+            updated: 'May 31, 2021'
           }
         case "Rosales":
           return {

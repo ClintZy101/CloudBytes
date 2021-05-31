@@ -2,7 +2,7 @@
   "Items": [
     {
       "Item": "ACCESSORIES:200MHZ FJ-2002 2 VGA SPLITTER",
-      "Description": "200MHZ 2 PORTS VGA SPLITTER FJ-2002..",
+      "Description": "200MHZ 2 PORTS VGA SPLITTER FJ-2002",
       "Quantity": 3,
       "Cost": "180.00",
       "BranchCost": 198,
@@ -35,14 +35,14 @@
     {
       "Item": "ACCESSORIES:FANTECH MPR350 AURORA",
       "Description": "FANTECH MPR350 AURORA RGB GAMING | 15 DAYS WARRANTY",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "777.00",
       "BranchCost": 854.7,
       "Price": "1,087.80"
     },
     {
       "Item": "ACCESSORIES:HDMI BI-DIRECTION SWITCH FJ-HD2",
-      "Description": "HDMI BI-DIRECTION SWITCH FJ-HD201..",
+      "Description": "HDMI BI-DIRECTION SWITCH FJ-HD201",
       "Quantity": 4,
       "Cost": "250.00",
       "BranchCost": 275,
@@ -163,23 +163,23 @@
     {
       "Item": "CABLES:HDMI CABLE",
       "Description": "HDMI CABLE 1.5 METERS",
-      "Quantity": 4,
-      "Cost": "45.00",
+      "Quantity": -6,
+      "Cost": "82.50",
       "BranchCost": 90.75,
-      "Price": "67.50"
+      "Price": "123.75"
     },
     {
       "Item": "CABLES:HEAVY DUTY POWER CORD 1.5M",
       "Description": "HEAVY DUTY POWER CORD 1.5M/ 1 WEEK WARRANTY ONLY",
-      "Quantity": 51,
-      "Cost": "25.00",
+      "Quantity": 1,
+      "Cost": "60.00",
       "BranchCost": 66,
-      "Price": "37.50"
+      "Price": "90.00"
     },
     {
       "Item": "CABLES:POWER CORD CABLE",
       "Description": "POWER CORD CABLE",
-      "Quantity": 38,
+      "Quantity": 43,
       "Cost": "30.00",
       "BranchCost": 33,
       "Price": "45.00"
@@ -187,8 +187,8 @@
     {
       "Item": "CABLES:VGA CABLE",
       "Description": "Cable VGA To VGA Cord 1.5",
-      "Quantity": 41,
-      "Cost": "45.00",
+      "Quantity": 21,
+      "Cost": "48.00",
       "BranchCost": 52.8,
       "Price": "84.00"
     },
@@ -273,14 +273,6 @@
       "Price": "176.75"
     },
     {
-      "Item": "CASE FAN:12CM*3 DEEPCOOL RF120FS",
-      "Description": "DEEPCOOL RF120FS 3IN1 LED TRICOLOR FAN I W/ HUB I 4PIN PWM",
-      "Quantity": 2,
-      "Cost": "689.00",
-      "BranchCost": 757.9,
-      "Price": "985.27"
-    },
-    {
       "Item": "CASE FAN:12CM*3 INPLAY ICE TOWER RGB",
       "Description": "INPLAY ICE TOWER 12CM 3 FAN KIT RGB WITH FAN HUB & REMOTE/ 6 MONTHS WARRANTY ONLY",
       "Quantity": 0,
@@ -307,7 +299,7 @@
     {
       "Item": "CASE FAN:12CM*3 KEYTECH STORM X3 MUSIC",
       "Description": "KEYTECH STORM X3 ARGB COOLING FANS 3 IN 1 MUSIC SYNC GAMING FAN | 12CM*3 | 6 PIN CONNECTOR | ARGB LIGHTING | W/ REMOTE & HUB",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "648.00",
       "BranchCost": 712.8,
       "Price": "926.64"
@@ -337,33 +329,9 @@
       "Price": "112.50"
     },
     {
-      "Item": "CASE W/ PSU:FUZION MINI ATX | 165 -22",
-      "Description": "FUZION MINI ATX ACRYLIC SIDE WITH 700 WATTS POWER SUPPLY | 2X RGB FAN | 165 -22 | 1 MONTH WARRANTY ON ELECTRONICS PARTS | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 1,
-      "Cost": "1,200.00",
-      "BranchCost": 1320,
-      "Price": "1,620.00"
-    },
-    {
-      "Item": "CASE W/ PSU:FUZION MINI ATX CASE | 275-D001",
-      "Description": "FUZION MINI ATX CASE WITH 700 WATTS POWER SUPPLY | 275-D001 | 1 MONTH WARRANTY ON ELECTRONICS PARTS ONLY",
-      "Quantity": 2,
-      "Cost": "750.00",
-      "BranchCost": 825,
-      "Price": "1,072.50"
-    },
-    {
-      "Item": "CASE W/ PSU:FUZION PINK HELA SERIES",
-      "Description": "FUZION HELA SERIES ATX TEMPERED GLASS GAMING CASE | PINK | CP01 | WITH 700 WATTS POWER SUPPLY | 1 MONTH WARRANTY ON ELECTRONICS PARTS ONLY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 2,
-      "Cost": "2,050.00",
-      "BranchCost": 2255,
-      "Price": "2,767.50"
-    },
-    {
       "Item": "CCTV:DAHUA 8CH KIT DH-KIT/XVR5108HS-",
       "Description": "DAHUA 8CH KIT DH-KIT/XVR5108HS-2MP 4PCS DOME & 4 PCS BULLET 8PCS(18M) COAXIAL CABLE 2PC 1:4 SPLITTER W/POWER CABLE | 1YR WTY",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "10,034.00",
       "BranchCost": 10736.38,
       "Price": "11,438.76"
@@ -371,7 +339,7 @@
     {
       "Item": "CCTV:DAHUA DH-KIT/XVR4108C-S2",
       "Description": "DAHUA DH-KIT/XVR4108C-S2 8PCS(BULLET 1MP) 8PCS(18M COXIAL CABLE) 1PC(8WAY CABLE | 1YR WTY | 1MONTH REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "6,409.00",
       "BranchCost": 6921.72,
       "Price": "7,434.44"
@@ -411,7 +379,7 @@
     {
       "Item": "CCTV:HIKVISION 8CH KIT TVI",
       "Description": "HIKVISION 8CH KIT TVI-8CH4D4B- 2MP 4PCS DOME & 4PCS BULLET 8PCS(18cm)COAXIAL CABLE 1PC 1:4 SPLITTER W/ POWER CABLE | 1 YEAR WARRANTY",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "10,098.00",
       "BranchCost": 10804.86,
       "Price": "11,511.72"
@@ -419,7 +387,7 @@
     {
       "Item": "CCTV:HIKVISION TVI-4CH2D2B-5MP",
       "Description": "HIKVISION TVI-4CH2D2B-5MP 4 CH. 2 DOME 2 BULLET 5MP | 1 YR WTY 1 MONTH REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "8,369.00",
       "BranchCost": 8954.83,
       "Price": "9,624.35"
@@ -427,7 +395,7 @@
     {
       "Item": "CCTV:HIKVISION TVI-8CH4D4B-5MP HDTVI",
       "Description": "HIKVISION TVI-8CH4D4B-5MP HDTVI 5 MP KIT 1 YR WTY 1 MONTH REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "14,346.00",
       "BranchCost": 15206.76,
       "Price": "16,067.52"
@@ -435,7 +403,7 @@
     {
       "Item": "CCTV:UNIVIEW KIT301",
       "Description": "UNIVIEW KIT301 | UVKIT NVR301-04LB-P4 POE | 4 PCS 2MP BULLET IPC 2122LR3-PF40-D POE | 1YR WTY",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "9,719.00",
       "BranchCost": 10399.33,
       "Price": "11,176.85"
@@ -467,7 +435,7 @@
     {
       "Item": "CHASSIS:COOLMAN STREAMER BLACK",
       "Description": "COOLMAN STREAMER BLACK ATX GAMING CASE | RGB STRIP FRONT PANEL | TEMPERED GLASS SIDE PANEL | 3.5\" HDD*2/ 2.5\" SSD*2 | 1 WEEK WARRANTY ON ELECTRONICS PART ONLY",
-      "Quantity": 2,
+      "Quantity": 1,
       "Cost": "1,438.00",
       "BranchCost": 1581.8,
       "Price": "1,941.30"
@@ -475,7 +443,7 @@
     {
       "Item": "CHASSIS:COOLMAN STREAMER WHITE",
       "Description": "COOLMAN STREAMER WHITE ATX GAMING CASE | RGB STRIP FRONT PANEL | TEMPERED GLASS SIDE PANEL | 3.5\" HDD*2/ 2.5\" SSD*2 | 1 WEEK WARRANTY ON ELECTRONICS PARTS ONLY",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "1,438.00",
       "BranchCost": 1581.8,
       "Price": "1,941.30"
@@ -483,7 +451,7 @@
     {
       "Item": "CHASSIS:DARKFLASH DLM21 BLACK",
       "Description": "DARKFLASH DLM21 BLACK | 3 DAYS WARRANTY ON ELECTRONICS PARTS WITH BOX",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "1,766.00",
       "BranchCost": 1942.6,
       "Price": "2,384.10"
@@ -539,7 +507,7 @@
     {
       "Item": "CHASSIS:DARKFLASH POLLUX WHITE MESH",
       "Description": "DARKFLASH POLLUX WHITE TEMPERED SIDE PANEL WITH 2X 140MM FRONT RAINBOW FAN",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "1,873.00",
       "BranchCost": 2060.3,
       "Price": "2,528.55"
@@ -627,7 +595,7 @@
     {
       "Item": "CHASSIS:INPLAY ESPORT 06 BLACK",
       "Description": "INPLAY ESPORT 06 BLACK | E-ATX, MICRO ATX | TEMPERED SIDE PANEL | W/ LED | 1 MONTH WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "1,078.00",
       "BranchCost": 1185.8,
       "Price": "1,455.30"
@@ -683,7 +651,7 @@
     {
       "Item": "CHASSIS:INPLAY WIND 01",
       "Description": "INPLAY WIND 01 |  ACRYLIC SIDE PANEL | HONEYCOMB DESIGN | MICRO ATX | MINI-ITX | 2X120MM | 1X80MM | 1X3.5\" HDD, 2X2.5 SSD",
-      "Quantity": 1,
+      "Quantity": 3,
       "Cost": "524.00",
       "BranchCost": 576.4,
       "Price": "749.32"
@@ -715,7 +683,7 @@
     {
       "Item": "CHASSIS:KEYTECH T850",
       "Description": "KEYTECH T850 TEMPERED GLASS GAMING CASE",
-      "Quantity": 0,
+      "Quantity": 3,
       "Cost": "954.00",
       "BranchCost": 1049.4,
       "Price": "1,335.60"
@@ -755,7 +723,7 @@
     {
       "Item": "CHASSIS:NOVUS VERTEX 950",
       "Description": "NOVUS VERTEX 950 | ACRYLIC SIDE PANEL | FIT TO ATX TO MATX | 2*HDD, 2*SSD, 1*FDD, 2*CD | W/ 3PCS RAINBOW FANS | 1 MONTH WARRANTY ON ELECTRONIC PARTS | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 2,
       "Cost": "798.00",
       "BranchCost": 877.8,
       "Price": "1,117.20"
@@ -889,14 +857,6 @@
       "Price": "5,451.60"
     },
     {
-      "Item": "GAMING TABLE:INPLAY T1 RGB GAMING TABLE",
-      "Description": "INPLAY T1 RGB GAMING TABLE | BLACK |126 x 66 x 60 CM |1 MONTH WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
-      "Cost": "3,815.00",
-      "BranchCost": 4196.5,
-      "Price": "4,578.00"
-    },
-    {
       "Item": "GAMING TABLE:VIKINGS YGGDRASIL YELLOW",
       "Description": "VIKINGS YGGDRASIL YELLOW GAMING TABLE SIZE 136X60X74 CM DOUBLE - SIDED CARBON FIBER / 15 DAYS WARRANTY ON PARTS ONLY",
       "Quantity": 0,
@@ -913,7 +873,7 @@
       "Price": "5,911.36"
     },
     {
-      "Item": "GRAPHICS CARD:ASUS GTX1050 TI 4GB PHOENIX",
+      "Item": "GRAPHIC CARD:ASUS GTX1050 TI 4GB PHOENIX",
       "Description": "ASUS PH GTX 1050Ti PHOENIX 4GB DDR5 128 BIT | SINGLE FAN | AUTO EXTREME | 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
       "Quantity": 0,
       "Cost": "7,367.00",
@@ -921,15 +881,15 @@
       "Price": "8,545.72"
     },
     {
-      "Item": "GRAPHICS CARD:ASUS RX5500 XT 8GB ROG STRIX",
+      "Item": "GRAPHIC CARD:ASUS RX5500 XT 8GB ROG STRIX",
       "Description": "ASUS ROG STRIX RX5500XT 8GB GAMING/DUAL FAN/GDDR6 128BIT/ AURASYNC | 1 YEAR WARRANTY 1 WEEK..OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "12,439.00",
       "BranchCost": 13185.34,
-      "Price": "18,658.50"
+      "Price": "14,304.85"
     },
     {
-      "Item": "GRAPHICS CARD:ASUS RX5600 XT 6GB ROG STRIX",
+      "Item": "GRAPHIC CARD:ASUS RX5600 XT 6GB ROG STRIX",
       "Description": "5600XT-T6-GAMING GDDR6 192BIT / TRIPPLE FAN/ AURA SYNC/ RGB | 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
       "Quantity": 0,
       "Cost": "17,544.00",
@@ -937,7 +897,7 @@
       "Price": "20,175.60"
     },
     {
-      "Item": "GRAPHICS CARD:BIOSTAR RX570 8GB GAMING",
+      "Item": "GRAPHIC CARD:BIOSTAR RX570 8GB GAMING",
       "Description": "BIOSTAR RX570 8GB GAMING",
       "Quantity": 0,
       "Cost": "12,059.00",
@@ -945,23 +905,23 @@
       "Price": "13,747.26"
     },
     {
-      "Item": "GRAPHICS CARD:COLORFUL GT710 2GB",
+      "Item": "GRAPHIC CARD:COLORFUL GT710 2GB",
       "Description": "2GB COLORFUL GT710 VGA  | 1 YEAR WARRANTY",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "2,500.00",
       "BranchCost": 2750,
       "Price": "3,250.00"
     },
     {
-      "Item": "GRAPHICS CARD:GIGABYTE GF210 1GB",
+      "Item": "GRAPHIC CARD:GIGABYTE GF210 1GB",
       "Description": "1GB GIGABYTE GF210 DDR3 64 BIT",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "2,350.00",
       "BranchCost": 2585,
       "Price": "3,055.00"
     },
     {
-      "Item": "GRAPHICS CARD:GIGABYTE RX580 8GB",
+      "Item": "GRAPHIC CARD:GIGABYTE RX580 8GB",
       "Description": "GIGABYTE RX580 GAMING (REV 2.0) 8GB AMD RADEON DDR5 256 BIT HDMI-DP",
       "Quantity": 0,
       "Cost": "10,850.00",
@@ -969,7 +929,7 @@
       "Price": "12,369.00"
     },
     {
-      "Item": "GRAPHICS CARD:INNO3D GTX1050 TI 4GB TWIN",
+      "Item": "GRAPHIC CARD:INNO3D GTX1050 TI 4GB TWIN",
       "Description": "INNO3D GTX1050TI 4 GB 128 BIT TWIN X2/ 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
       "Quantity": 0,
       "Cost": "5,828.00",
@@ -977,15 +937,15 @@
       "Price": "6,760.48"
     },
     {
-      "Item": "GRAPHICS CARD:MSI GTX1050 TI 4GB",
+      "Item": "GRAPHIC CARD:MSI GTX1050 TI 4GB",
       "Description": "MSI GEFORCE GTX 1050 Ti 4GT 4GB OCV1 GDDR5 128-BIT DISPLAY PORT / HDMI / DL-DVI-D",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "8,112.00",
       "BranchCost": 8679.84,
       "Price": "9,328.80"
     },
     {
-      "Item": "GRAPHICS CARD:MSI GTX1660 TI 6GB AERO ITX",
+      "Item": "GRAPHIC CARD:MSI GTX1660 TI 6GB AERO ITX",
       "Description": "MSI GEFORCE® GTX 1660 Ti AERO ITX 6G OC 192 BIT VIDEO CARD | 2 YEARS WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT ONLY",
       "Quantity": 0,
       "Cost": "14,739.00",
@@ -993,7 +953,7 @@
       "Price": "17,244.63"
     },
     {
-      "Item": "GRAPHICS CARD:MSI RX570 8GB",
+      "Item": "GRAPHIC CARD:MSI RX570 8GB",
       "Description": "MSI RADEON RX570 8GB OC",
       "Quantity": 0,
       "Cost": "9,000.00",
@@ -1001,7 +961,7 @@
       "Price": "10,350.00"
     },
     {
-      "Item": "GRAPHICS CARD:MSI RX570 8GB ARMOR",
+      "Item": "GRAPHIC CARD:MSI RX570 8GB ARMOR",
       "Description": "MSI RADEON RX570 ARMOR 8G OC READY GDDR5X | 2 YEARS WARRANTY | 1  MONTH OUTRIGHT REPLACEMENT",
       "Quantity": 0,
       "Cost": "14,420.00",
@@ -1009,7 +969,7 @@
       "Price": "16,150.40"
     },
     {
-      "Item": "GRAPHICS CARD:PALIT GTX1650 4GB GAMING PRO",
+      "Item": "GRAPHIC CARD:PALIT GTX1650 4GB GAMING PRO",
       "Description": "PALIT GEFORCE GTX1650 GAMING PRO 4GB GDDR6 128 BIT  | 1 YEAR WARRANTY | 1WEEK OUTRIGHT REPLACEMENT ONLY",
       "Quantity": 0,
       "Cost": "7,738.00",
@@ -1017,7 +977,7 @@
       "Price": "9,053.46"
     },
     {
-      "Item": "GRAPHICS CARD:PALIT GTX1650 4GB STORM X",
+      "Item": "GRAPHIC CARD:PALIT GTX1650 4GB STORM X",
       "Description": "PALIT GEFORCE GTX1650 STORM X 4GB GDDR6 128 BIT | 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT ONLY",
       "Quantity": 0,
       "Cost": "7,313.00",
@@ -1025,17 +985,9 @@
       "Price": "8,556.21"
     },
     {
-      "Item": "GRAPHICS CARD:POWERCOLOR RED DRAGON RX550 4GB",
-      "Description": "POWERCOLOR RED DRAGON PC AXRX550 4GBD5-DH I 4GB DDR5 I SINGLE FAN I 128BIT I 2 YEARS WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
-      "Cost": "7,918.00",
-      "BranchCost": 8709.8,
-      "Price": "9,105.70"
-    },
-    {
       "Item": "HDD:1TB SEAGATE BARRACUDA",
       "Description": "SEAGATE 1TB ST1000DM010 BARACUDA 7200 SATA 3.5 HDD | 15 MOS WARRANTY | 1MONTH REPLACEMENT | NO BOX NO REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 3,
       "Cost": "1,961.00",
       "BranchCost": 2157.1,
       "Price": "2,647.35"
@@ -1059,7 +1011,7 @@
     {
       "Item": "HDD:500GB SEAGATE DISTRO",
       "Description": "500GB SEAGATE DISTRO 3.5/ 7200RPM | 6 MONTHS WARRANTY",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "1,150.00",
       "BranchCost": 1265,
       "Price": "1,552.50"
@@ -1067,7 +1019,7 @@
     {
       "Item": "HDD:500GB SEAGATE PIPELINE",
       "Description": "500GB SEAGATE ST3500414CS INTERNAL HDD PIPELINE | 3 MONTHS WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 6,
+      "Quantity": 8,
       "Cost": "603.00",
       "BranchCost": 663.3,
       "Price": "862.29"
@@ -1123,15 +1075,15 @@
     {
       "Item": "HEADPHONES:RAKK DAGUOB RED",
       "Description": "RAKK DAGUOB RED ILLUMINATED GAMING HEADSET | 1 MONTH WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT ONLY",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "390.00",
       "BranchCost": 429,
       "Price": "585.00"
     },
     {
       "Item": "HEADPHONES:REDRAGON H120 ARES",
-      "Description": "REDRAGON ARES H120 GAMING HEADSET | HIGHLY ADJUSTABLE NOISE CANCELLING MICROPHONE FOR OPTIMIZED VOICE CHAT | W/ MICROPHONE",
-      "Quantity": 7,
+      "Description": "H120 ARES GAMING HEADSET",
+      "Quantity": 10,
       "Cost": "360.00",
       "BranchCost": 396,
       "Price": "540.00"
@@ -1171,7 +1123,7 @@
     {
       "Item": "KEYBOARD:HP GK400Y KEYBOARD",
       "Description": "HP GK400Y RAINBOW BACKLIT (SILVER) MECHANICAL GAMING KEYBOARD | 6 MONTHS WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "1,404.00",
       "BranchCost": 1544.4,
       "Price": "1,895.40"
@@ -1217,17 +1169,9 @@
       "Price": "328.50"
     },
     {
-      "Item": "KEYBOARD & MOUSE:INPLAY STX240 BLACK  RGB COMBO",
-      "Description": "INPLAY STX 240 BLACK COMBO | KEYBOARD, MOUSE, HEADSET | 1 MONTH WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
-      "Cost": "439.00",
-      "BranchCost": 482.9,
-      "Price": "636.55"
-    },
-    {
       "Item": "KEYBOARD & MOUSE:INPLAY STX360",
       "Description": "INPLAY STX360 WIRED KEYBOARD & MOUSE W/ RAINBOW BACKLIGHT | 3 MONTHS WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 10,
+      "Quantity": 6,
       "Cost": "258.00",
       "BranchCost": 283.8,
       "Price": "387.00"
@@ -1321,30 +1265,6 @@
       "Price": "1,417.50"
     },
     {
-      "Item": "KMHM BUNDLE",
-      "Description": "KEYBOARD/ MOUSE/ HEADSET/ MOUSE PAD",
-      "Quantity": 0,
-      "Cost": "650.00",
-      "BranchCost": 929.5,
-      "Price": "929.50"
-    },
-    {
-      "Item": "KMHM BUNDLE:4 IN 1 CLEVER BUNDLE",
-      "Description": "4 IN 1 FUZION KEYBOARD/ MOUSE/ HEADSET/ MOUSE PAD BUNDLE | CP01 | 1 MONTH WARRANTY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 4,
-      "Cost": "650.00",
-      "BranchCost": 715,
-      "Price": "929.50"
-    },
-    {
-      "Item": "MONITOR:18.5\" 65HZ G1850HD GOMA LED",
-      "Description": "GOMA G1850HD 18.5\" LED MONITOR | 65HZ FLAT | 5MS | HDMI, VGA | 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 4,
-      "Cost": "2,185.00",
-      "BranchCost": 2403.5,
-      "Price": "2,949.75"
-    },
-    {
       "Item": "MONITOR:18.5\" HP P19B G4 LED",
       "Description": "HP 18.5\" P19B G4 LED DIAGONAL WXGA | 1366X768 | 16:9 | 5MS | HDMI, VGA | ANTI-REFLECTIVE | BLUE LIGHT FILTER | 1 YEAR WARRANTY",
       "Quantity": 1,
@@ -1363,7 +1283,7 @@
     {
       "Item": "MONITOR:19\" NVISION N190 LED",
       "Description": "NVISION N190 19\" LED | 1400X900 | 60HZ | 80/80/80/80 | 5MS | TN | 250CD/M2/ 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 6,
       "Cost": "2,142.00",
       "BranchCost": 2356.2,
       "Price": "2,784.60"
@@ -1377,14 +1297,6 @@
       "Price": "2,666.25"
     },
     {
-      "Item": "MONITOR:21.5\" FUZION WIDE LED SCREEN 75",
-      "Description": "21.5\" FUZION WIDE LED SCREEN 75HZ..(FN-22EL) 6 MONTHS WARRANTY|  3 DAYS REPLACEMENT ONLY",
-      "Quantity": 0,
-      "Cost": "3,225.00",
-      "BranchCost": 3547.5,
-      "Price": "4,031.25"
-    },
-    {
       "Item": "MONITOR:22\" VIEW SONIC VA2223-H",
       "Description": "VIEWSONIC VA2223-H 22\" 1080P HDMI AND VGA INPUT VESA MOUNTABLE | 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
       "Quantity": 5,
@@ -1395,23 +1307,15 @@
     {
       "Item": "MONITOR:24\" DELL P2419H",
       "Description": "DELL P2419H 24\" 1920 X 1080 AT 60HZ MONITOR BUILT WITH AN ULTRATHIN BEZEL DESIGN | 1 YR WTY | 1 WEEK REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "10,250.00",
       "BranchCost": 10762.5,
       "Price": "11,685.00"
     },
     {
-      "Item": "MONITOR:24\" IPS FUZION WIDE LED 75HZ",
-      "Description": "24\" IPS FUZION WIDE LED 75HZ..(FN-24EL) 6 MONTHS WARRANTY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 2,
-      "Cost": "4,200.00",
-      "BranchCost": 4620,
-      "Price": "4,956.00"
-    },
-    {
       "Item": "MONITOR:24\" NOVUS LED MONITOR",
       "Description": "NOVUS 24UMPH 24 INCH LED MONITOR | FRAMELESS | 60HZ | LED 1920X1080 | MOUNTABLE /VGA, HDMI | 6 MONTHS WTY 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 3,
+      "Quantity": 2,
       "Cost": "5,140.00",
       "BranchCost": 5551.2,
       "Price": "5,962.40"
@@ -1436,9 +1340,9 @@
       "Item": "MONITOR:24\" NVISION XC24C BLK",
       "Description": "NVISION XC24C 24\" BLACK 75Hz CURVED 3000R GAMING MONITOR / 1 YEAR WARRANTY",
       "Quantity": 0,
-      "Cost": "4,301.00",
+      "Cost": "4,299.00",
       "BranchCost": 4642.92,
-      "Price": "5,075.18"
+      "Price": "5,072.82"
     },
     {
       "Item": "MONITOR:24\" NVISION XC24S V3 BLK",
@@ -1451,7 +1355,7 @@
     {
       "Item": "MONITOR:24\" NVISION XC24S WHITE",
       "Description": "NVISION XC24S 24\" White 75Hz Curved 3000R GAMING MONITOR | 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": -1,
       "Cost": "4,010.00",
       "BranchCost": 4330.8,
       "Price": "4,731.80"
@@ -1459,7 +1363,7 @@
     {
       "Item": "MONITOR:24\" QNIX CURVED WHITE",
       "Description": "24\" QNIX CURVED WHITE 75 Hz  HDR MONITOR (WHITE) WITH SPEAKER | 1 YEAR WARRANTY",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "5,400.00",
       "BranchCost": 5832,
       "Price": "6,264.00"
@@ -1531,7 +1435,7 @@
     {
       "Item": "MOTHERBOARD:A320M GIGABYTE S2H",
       "Description": "GIGABYTE A320M-S2H | AM4 | DUAL DDR4 | HDMI, DVI-D, D-SUB | 1*M.2 | SUPPORTS RYZEN & ATHLON SERIES | MICRO ATX",
-      "Quantity": 5,
+      "Quantity": 7,
       "Cost": "2,500.00",
       "BranchCost": 2750,
       "Price": "3,250.00"
@@ -1563,7 +1467,7 @@
     {
       "Item": "MOTHERBOARD:A320M MSI PRO-VH PLUS",
       "Description": "MSI A320M PRO - PLUS SOCKET AM4 DDR4 MOTHERBOARD | 1 YEAR WARRANTY | 15 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 17,
+      "Quantity": 18,
       "Cost": "2,541.00",
       "BranchCost": 2795.1,
       "Price": "3,303.30"
@@ -1571,7 +1475,7 @@
     {
       "Item": "MOTHERBOARD:B365M GIGABYTE D3H INTEL BASE",
       "Description": "GIGABYTE B365M D3H INTEL BASE MOTHERBOARD | 1 YR WTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "4,264.00",
       "BranchCost": 4605.12,
       "Price": "5,031.52"
@@ -1579,7 +1483,7 @@
     {
       "Item": "MOTHERBOARD:B365M MSI MAG MORTAR",
       "Description": "MSI MAG B365M MORTAR INTEL B365 CHIPSET MOTHERBOARD | 1 YR WTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "4,524.00",
       "BranchCost": 4885.92,
       "Price": "5,338.32"
@@ -1595,7 +1499,7 @@
     {
       "Item": "MOTHERBOARD:B450M ASUS PRIME A 2",
       "Description": "ASUS B450 PRIME B450M-A || AM4 DDR4 32MB BIOS MICRO ATX/ AURA SYNC/ 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "4,033.00",
       "BranchCost": 4355.64,
       "Price": "4,758.94"
@@ -1651,7 +1555,7 @@
     {
       "Item": "MOTHERBOARD:B450M GIGABYTE DS3H V2",
       "Description": "GIGABYTE GA- B450M - DS3H- V2 SOCKET AM4 DDR4 MATX MOTHERBOARD |1 YEAR WARRANTY | 1 WEEK REPLACEMENT",
-      "Quantity": 7,
+      "Quantity": 5,
       "Cost": "3,848.00",
       "BranchCost": 4232.8,
       "Price": "4,617.60"
@@ -1699,7 +1603,7 @@
     {
       "Item": "MOTHERBOARD:B460M ASROCK STEEL LEGEND",
       "Description": "ASROCK B460M STEEL LEGEND (90-MXBDQ0-A0UAYZ) / HDMI DISPLAYPORT GRAPHICS OUTPUT / 2 YEARS WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "5,717.00",
       "BranchCost": 6174.36,
       "Price": "6,631.72"
@@ -1747,7 +1651,7 @@
     {
       "Item": "MOTHERBOARD:FM2 ASROCK FM2FM2A68M-DG3+",
       "Description": "ASROCK FM2A68M-DG3+ | FM2 100W | FM2+ 95W | A68H (BOLTON-D2H) | 2*DDR3 2400+(OC) | D-SUB, DVI-D | MICRO ATX | 1YEAR WARRANTY |1MONTH OUTRIGHT REPLACMENT",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "2,258.00",
       "BranchCost": 2483.8,
       "Price": "2,935.40"
@@ -1763,7 +1667,7 @@
     {
       "Item": "MOTHERBOARD:X570 MSI MPG GAMING EDGE WIFI",
       "Description": "MSI MPG X570 GAMING EDGE WIFI | SUPPORT 2ND AND 3RD GEN | UP TO 4400+(OC) MHz | RAINBOW LED STRIP | 1 YR WTY | 15 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "10,404.00",
       "BranchCost": 11132.28,
       "Price": "11,860.56"
@@ -1771,7 +1675,7 @@
     {
       "Item": "MOTHERBOARD:X570 MSI MPG GAMING PLUS",
       "Description": "MSI MPG X570 GAMING PLUS | RYZEN 2ND AND 3RD GEN AMD RYZEN | DDR4 | MYSTIC LIGHT | RAINBOW LED STRIP | 1 YR WTY | 15 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "9,588.00",
       "BranchCost": 10259.16,
       "Price": "11,026.20"
@@ -1819,7 +1723,7 @@
     {
       "Item": "MOUSEPAD:COUGAR ARENA X PINK",
       "Description": "COUGAR ARENA X PINK 100 X 400 X 5MM GAMING MOUSEPAD",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "977.00",
       "BranchCost": 1074.7,
       "Price": "1,367.80"
@@ -1843,7 +1747,7 @@
     {
       "Item": "MOUSEPAD:MP-60R BLOODY MOUSEPAD",
       "Description": "MP-60R BLOODY RGB GAMING MOUSEPAD SIZE 354MM(L) 256MM(W) 2.6MM(H) | 1 MONTH WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "830.00",
       "BranchCost": 913,
       "Price": "1,162.00"
@@ -1859,7 +1763,7 @@
     {
       "Item": "MOUSEPAD:RAZER BIG MOUSE PAD",
       "Description": "RAZER BIG MOUSE PAD",
-      "Quantity": 0,
+      "Quantity": 3,
       "Cost": "40.00",
       "BranchCost": 44,
       "Price": "65.00"
@@ -1891,9 +1795,9 @@
     {
       "Item": "POWER STRIP:6 SOCKETS HUNTKEY SZM604-4",
       "Description": "HUNTKEY SZM604-4 6 SOCKETS 2 METERS POWER EXTENSION",
-      "Quantity": 1,
+      "Quantity": 3,
       "Cost": "404.00",
-      "BranchCost": 363.6,
+      "BranchCost": 585.8,
       "Price": "585.80"
     },
     {
@@ -1907,18 +1811,10 @@
     {
       "Item": "POWER SUPPLY:500W AVR SECURE",
       "Description": "AVR SECURE 500W",
-      "Quantity": 20,
+      "Quantity": 30,
       "Cost": "193.00",
       "BranchCost": 275,
       "Price": "289.50"
-    },
-    {
-      "Item": "POWER SUPPLY:500W FUZION TRUE RATED",
-      "Description": "500 WATTS FUZION TRUE RATED POWER SUPPLY | 3 MONTHS WARRANTY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 5,
-      "Cost": "1,200.00",
-      "BranchCost": 1100,
-      "Price": "1,680.00"
     },
     {
       "Item": "POWER SUPPLY:500W TR 80+ COOLER MASTER WHITE",
@@ -1961,6 +1857,14 @@
       "Price": "2,025.00"
     },
     {
+      "Item": "POWER SUPPLY:500W TR FUZION",
+      "Description": "500W Tru Rated Fuzion",
+      "Quantity": 0,
+      "Cost": "1,000.00",
+      "BranchCost": 1100,
+      "Price": "1,400.00"
+    },
+    {
       "Item": "POWER SUPPLY:500W TR REDRAGON RGPS",
       "Description": "REDRAGON RGPS-500W GAMING PSU..",
       "Quantity": 0,
@@ -1979,7 +1883,7 @@
     {
       "Item": "POWER SUPPLY:550W TR 80+ COOLER MASTER WHITE",
       "Description": "COOLER MASTER  MWE WHITE 230V 550WA/US CABLE (MPE-5501-ACABW-US) | 6 MONTHS WARRANTY | 15 DAYS OUTRIGHT  REPLACEMENT..",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "2,173.00",
       "BranchCost": 2390.3,
       "Price": "2,933.55"
@@ -1987,7 +1891,7 @@
     {
       "Item": "POWER SUPPLY:550W TR 80+G SEASONIC CORE",
       "Description": "550Watts Seasonic SSR550LC Core Gold GC (1 Year Warranty)",
-      "Quantity": 0,
+      "Quantity": -1,
       "Cost": "3,770.00",
       "BranchCost": 4147,
       "Price": "4,524.00"
@@ -2041,33 +1945,9 @@
       "Price": "4,284.00"
     },
     {
-      "Item": "POWER SUPPLY:700 WATTS FUZION BLUE",
-      "Description": "700 WATTS FUZION WITH 12 CM FAN | BLUE | X700B | 3 MONTHS WARRANTY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 2,
-      "Cost": "450.00",
-      "BranchCost": 495,
-      "Price": "652.50"
-    },
-    {
-      "Item": "POWER SUPPLY:700 WATTS FUZION GREEN",
-      "Description": "700 WATTS FUZION WITH 12 CM FAN | GREEN | X700G | 3 MONTHS WARRANTY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 2,
-      "Cost": "450.00",
-      "BranchCost": 495,
-      "Price": "652.50"
-    },
-    {
-      "Item": "POWER SUPPLY:700 WATTS FUZION RED",
-      "Description": "700 WATTS FUZION WITH 12 CM FAN | RED| X700R | 3 MONTHS WARRANTY | 3 DAYS REPLACEMENT ONLY",
-      "Quantity": 2,
-      "Cost": "450.00",
-      "BranchCost": 495,
-      "Price": "652.50"
-    },
-    {
       "Item": "POWER SUPPLY:700W GEN ELECTRON",
       "Description": "700 WATTS ELECTRON POWER SUPPLY / 1 Week Outright Replacement/ 1 Year warranty",
-      "Quantity": 2,
+      "Quantity": 3,
       "Cost": "377.00",
       "BranchCost": 414.7,
       "Price": "565.50"
@@ -2115,7 +1995,7 @@
     {
       "Item": "POWER SUPPLY:700W GEN VALIANT",
       "Description": "700W VALIANT POWER SUPPLY/ 1 Year Warranty/ 1 Week Outright Replacement Only",
-      "Quantity": 0,
+      "Quantity": 2,
       "Cost": "373.00",
       "BranchCost": 410.3,
       "Price": "559.50"
@@ -2131,7 +2011,7 @@
     {
       "Item": "POWER SUPPLY:735W TR 80+B RAIDMAX RX-735AP-R",
       "Description": "RAIDMAX RX-735AP-R 735W RGB 80PLUS Bronze Certified SEMI MODULAR Powersupply | 1 YR WTY | 1wk Outright Replacement",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "3,250.00",
       "BranchCost": 3575,
       "Price": "4,062.50"
@@ -2147,15 +2027,15 @@
     {
       "Item": "PRINTER:EPSON L120 SINGLE",
       "Description": "EPSON L120 SINGLE FUNCTION INK TANK PRINTER / 720X720dpi T6641/T6642/T6643/T6644 (1 YEAR WARRANTY)",
-      "Quantity": 9,
+      "Quantity": 13,
       "Cost": "5,050.00",
       "BranchCost": 5724,
-      "Price": "6,500.00"
+      "Price": "6,148.00"
     },
     {
       "Item": "PRINTER:EPSON L3110 PRINTER C11CG87503",
       "Description": "EPSON L3110 ECO TANK ALL IN ONE INK TANK  PRINTER ..(1 YEAR WARRANTY)",
-      "Quantity": 4,
+      "Quantity": 7,
       "Cost": "7,450.00",
       "BranchCost": 8046,
       "Price": "8,700.00"
@@ -2179,7 +2059,7 @@
     {
       "Item": "PROCESSOR:AMD A6-7480 APU",
       "Description": "AMD APU A6-7480 W/ RADEON R5 GRAPHICS | 3.8GHZ MAX, 1MB CACHE | 8 CORES (2 CPU + 6 GPU) | FM2+ | W/ HEATSINK FAN",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "1,634.00",
       "BranchCost": 1797.4,
       "Price": "2,205.90"
@@ -2203,7 +2083,7 @@
     {
       "Item": "PROCESSOR:AMD ATHLON 3000G",
       "Description": "AMD ATHLON 3000G W/ RADEON VEGA 3 GRAPHICS | 2 CORES, 4 THREADS | 3.5GHZ BASE | 5MB CACHE, UNLOCKED | AM4 | W/ HEATSINK FAN",
-      "Quantity": 6,
+      "Quantity": 8,
       "Cost": "3,125.00",
       "BranchCost": 3437.5,
       "Price": "3,906.25"
@@ -2219,15 +2099,15 @@
     {
       "Item": "PROCESSOR:AMD RYZEN 3 3100",
       "Description": "AMD RYZEN 3 3100 3.9GHZ 65W QUAD CORE AM4 PROCESSOR | 1 YEAR WARRANTY 1WEEK OUTRIGHT REPLACEMENT ONLY.",
-      "Quantity": 3,
-      "Cost": "5,253.00",
+      "Quantity": 1,
+      "Cost": "5,607.00",
       "BranchCost": 6055.56,
       "Price": "6,504.12"
     },
     {
       "Item": "PROCESSOR:AMD RYZEN 3 3200G",
       "Description": "AMD RYZEN 3 3200G W/ RADEON VEGA 8 GRAPHICS | 4 CORES, 4 THREADS | 3.6GHZ BASE | 4.0GHZ MAX | 6MB CACHE, UNLOCKED | AM4 | W/ HEATSINK FAN | (1 YEAR WARRANTY)",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "7,350.00",
       "BranchCost": 7938,
       "Price": "8,526.00"
@@ -2251,7 +2131,7 @@
     {
       "Item": "PROCESSOR:AMD RYZEN 5 3400G",
       "Description": "AMD RYZEN 5 3400G W/ RADEON VEGA 11 GRAPHICS | 4 CORES, 8 THREADS | 3.7GHZ BASE | 4.2GHZ MAX | 6MB CACHE, UNLOCKED | AM4 | W/ HEATSINK FAN | 1 YEAR WARRANTY",
-      "Quantity": 0,
+      "Quantity": 1,
       "Cost": "9,040.00",
       "BranchCost": 9672.8,
       "Price": "10,396.00"
@@ -2275,7 +2155,7 @@
     {
       "Item": "PROCESSOR:INTEL i7-10700K UNLOCKED 3.8GHZ",
       "Description": "INTEL i7-10700K UNLOCKED 3.8GHZ UP TO 5.10GHZ LGA1200 | 8 CORES 16 THREADS | 16MB CACHE | 1 YEAR WARRANTY |1 MONTH  OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "19,812.00",
       "BranchCost": 20802.6,
       "Price": "21,991.32"
@@ -2289,17 +2169,9 @@
       "Price": "6,862.56"
     },
     {
-      "Item": "PROCESSOR TRAY TYPE:AMD RYZEN 5 3600 TRAY TYPE",
-      "Description": "RYZEN 5 3600 6CORES I TRAY TYPE I 12 THREADS 4.2/ 3.6 GHZ/65W AM4 CPU 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
-      "Cost": "10,300.00",
-      "BranchCost": 11330,
-      "Price": "11,742.00"
-    },
-    {
       "Item": "RAM:16GB(2X8) DDR4-3200 AVEXIR RGB",
       "Description": "AVEXIR 16GB 2X8GB 3200MHZ CORE2 (AVD4UZ332001608G-2C2C) | 1 YEAR WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 1,
       "Cost": "4,363.00",
       "BranchCost": 4712.04,
       "Price": "5,148.34"
@@ -2319,14 +2191,6 @@
       "Cost": "4,160.00",
       "BranchCost": 4492.8,
       "Price": "4,908.80"
-    },
-    {
-      "Item": "RAM:16GB(2X8) DDR4-3200 KINGSTON",
-      "Description": "KINGSTON HYPER X HX432C16FB4/1616GB DDR4 | 3200 CL16 288 PIN UDIMM | 1MON OUTRIGHT | 1YEAR WARRANTY",
-      "Quantity": 0,
-      "Cost": "4,400.00",
-      "BranchCost": 4840,
-      "Price": "5,192.00"
     },
     {
       "Item": "RAM:16GB(2X8) DDR4-3200 TFORCE RGB",
@@ -2353,17 +2217,9 @@
       "Price": "4,920.60"
     },
     {
-      "Item": "RAM:16GB(2X8) DDR4-3200 TG DARK Z",
-      "Description": "TEAM GROUP DARK Z 2X8GB 3200MHZ DDR4 |GRAY | (TDZGD416G3200HC16CDC01) | NON-RGB | 6 MONTHS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
-      "Cost": "4,451.00",
-      "BranchCost": 4896.1,
-      "Price": "5,252.18"
-    },
-    {
       "Item": "RAM:4GB DDR3-1600 SKIHOTAR",
       "Description": "SKIHOTAR 4GB DDR3-1600 1.5V CL11 SM3MJ8M3B04A11600CG | 1 YEAR WARRANTY | 1 WEEK OUTRIGTH REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 3,
       "Cost": "660.00",
       "BranchCost": 726,
       "Price": "943.80"
@@ -2387,7 +2243,7 @@
     {
       "Item": "RAM:8GB DDR3-1600 AVEXIR",
       "Description": "AVEXIR 8GB DDR3-1600 C11 1.5V AVD3U16001108G-1BW |2YEARS WARRANTY | 1MONTH OUTRIGHT REPLACEMENT",
-      "Quantity": 0,
+      "Quantity": 2,
       "Cost": "1,423.00",
       "BranchCost": 1565.3,
       "Price": "1,921.05"
@@ -2399,14 +2255,6 @@
       "Cost": "1,499.00",
       "BranchCost": 1648.9,
       "Price": "2,023.65"
-    },
-    {
-      "Item": "RAM:8GB DDR3-1600 SKIHOTAR",
-      "Description": "SKIHOTAR 8GB DDR3 1600MHZ DESKTOP MEMORY",
-      "Quantity": 1,
-      "Cost": "1,361.00",
-      "BranchCost": 1497.1,
-      "Price": "1,837.35"
     },
     {
       "Item": "RAM:8GB DDR3-1600 TEAM GROUP ELITE",
@@ -2427,7 +2275,7 @@
     {
       "Item": "RAM:8GB DDR4-2666 KIMTIGO",
       "Description": "KIMTIGO 8GB DDR4-2666 2RX8 PC4 - 21300U -19 (KMKU8G868-2666V) | 2 YEARS WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 3,
       "Cost": "1,974.00",
       "BranchCost": 2171.4,
       "Price": "2,664.90"
@@ -2467,7 +2315,7 @@
     {
       "Item": "RAM:8GB DDR4-2666 SKIHOTAR",
       "Description": "8GB SKIHOTAR DDR4 2666MHz / 1 Year Warranty",
-      "Quantity": 11,
+      "Quantity": 1,
       "Cost": "1,853.00",
       "BranchCost": 2038.3,
       "Price": "2,501.55"
@@ -2490,11 +2338,11 @@
     },
     {
       "Item": "RAM:8GB DDR4-3200 KINGSTON HYPERX",
-      "Description": "KINGSTON KHX432C16FB4/16GB/ SINGLE STICK/ 3200MHZ D4 FURY BK/ 2 YEARS WARRANTY 1 WEEK OUTRIGHT",
+      "Description": "8GB KINGSTON DDR4 3200MHZ HYPERX FURY MEMORY 1 YEAR WARRANTY",
       "Quantity": 0,
-      "Cost": "2,888.00",
+      "Cost": "1,930.00",
       "BranchCost": 2123,
-      "Price": "3,754.40"
+      "Price": "2,605.50"
     },
     {
       "Item": "ROUTER:TENDA F6 WIRELESS N300 ROUTER",
@@ -2527,6 +2375,14 @@
       "Cost": "100.00",
       "BranchCost": 110,
       "Price": "120.00"
+    },
+    {
+      "Item": "SPEAKER:F&D V320 MULTIMEDIA SPEAKER 2.0",
+      "Description": "F&D V320 MULTIMEDIA SPEAKER 2.0",
+      "Quantity": 1,
+      "Cost": "0.00",
+      "BranchCost": 0,
+      "Price": "600.00"
     },
     {
       "Item": "SPEAKER:INPLAY MS001 USB 2.0 MULTIMEDIA",
@@ -2563,7 +2419,7 @@
     {
       "Item": "SPEAKER:KEYTECH S10 MINI SPEAKER PINK",
       "Description": "KEYTECH S10 MINI SPEAKER PINK | 15 DAYS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 3,
+      "Quantity": 5,
       "Cost": "219.00",
       "BranchCost": 240.9,
       "Price": "328.50"
@@ -2571,7 +2427,7 @@
     {
       "Item": "SPEAKER:KEYTECH S10 MINI SPEAKER RED",
       "Description": "KEYTECH S10 MINI SPEAKER RED | 15 DAYS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 4,
       "Cost": "219.00",
       "BranchCost": 240.9,
       "Price": "328.50"
@@ -2611,7 +2467,7 @@
     {
       "Item": "SSD:120GB KINGSTON",
       "Description": "KINGSTON 120GB A400 SATA 3 2.5 SA400S37/120G Internal SSD",
-      "Quantity": 0,
+      "Quantity": 2,
       "Cost": "1,221.00",
       "BranchCost": 1343.1,
       "Price": "1,648.35"
@@ -2619,18 +2475,10 @@
     {
       "Item": "SSD:120GB LEXAR NS10 LITE",
       "Description": "LEXAR NS10 LITE 120GB SSD",
-      "Quantity": 1,
+      "Quantity": 2,
       "Cost": "1,100.00",
       "BranchCost": 1210,
       "Price": "1,485.00"
-    },
-    {
-      "Item": "SSD:120GB M.2 WESTERN DIGITAL",
-      "Description": "WESTERN DIGITAL GREEN M.2 120GB 3D NAND SATAIII SSD (WD5120G2G0B) | 2YEARS WARRANTY | 1WEEK OUTRIGHT REPLACEMENT ONLY",
-      "Quantity": 0,
-      "Cost": "1,129.00",
-      "BranchCost": 1241.9,
-      "Price": "1,524.15"
     },
     {
       "Item": "SSD:120GB RAMSTA",
@@ -2643,7 +2491,7 @@
     {
       "Item": "SSD:120GB WD GREEN",
       "Description": "120GB WESTERN DIGITAL GREEN NANO SSD | WD5120G2G0A | 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 5,
       "Cost": "1,366.00",
       "BranchCost": 1502.6,
       "Price": "1,844.10"
@@ -2667,7 +2515,7 @@
     {
       "Item": "SSD:240GB KINGSTON",
       "Description": "Kingston Technology SA400S37/240G A400 SSD Solid State Drive 2.5 Inch SATA-3 240GB",
-      "Quantity": 2,
+      "Quantity": 4,
       "Cost": "1,628.00",
       "BranchCost": 1790.8,
       "Price": "2,197.80"
@@ -2691,10 +2539,10 @@
     {
       "Item": "SSD:240GB SKIHOTAR A320",
       "Description": "SKIHOTAR 240GB A320 2.5\" / 7MM SATA III 6GB/S | 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
-      "Quantity": 17,
-      "Cost": "1,444.00",
+      "Quantity": 0,
+      "Cost": "1,283.00",
       "BranchCost": 1411.3,
-      "Price": "1,949.40"
+      "Price": "1,732.05"
     },
     {
       "Item": "SSD:240GB WD GREEN",
@@ -2721,28 +2569,12 @@
       "Price": "3,531.60"
     },
     {
-      "Item": "SSD:512GB RAMSTA R1S800512G",
-      "Description": "RAMSTA R1S800512G 512GB SOLID STATE DRIVE| 1 YEAR WARRANTY | 1 MONTH OUTRIGHT",
-      "Quantity": 0,
-      "Cost": "2,562.00",
-      "BranchCost": 2818.2,
-      "Price": "3,330.60"
-    },
-    {
       "Item": "SWITCH HUB:TP LINK TL-SF1008D 8 PORT",
       "Description": "TP LINK TL-SF1008D 8 PORT 100MBPS SWITCH HUB NETWORKING/ 1 Year Warranty/ 1 Week Outright Replacement Only (No Box No Outright)",
       "Quantity": 0,
       "Cost": "401.00",
       "BranchCost": 441.1,
       "Price": "581.45"
-    },
-    {
-      "Item": "UPS:650VA APC BVX650I-PH | 360W",
-      "Description": "APC BVX650I-PH 650VA | 360W | 230V | 4 OUTLETS BACK UP BATTERY | 6-8 HRS | 6 MONTHS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
-      "Cost": "2,215.00",
-      "BranchCost": 2436.5,
-      "Price": "2,990.25"
     },
     {
       "Item": "UPS:650VA SECURE",
@@ -2771,8 +2603,8 @@
     {
       "Item": "WEBCAM:1080P GSOU T16S",
       "Description": "GSOU T16S WITH LED 1080P 30FPS FULL HD WITH BUILT IN MICROPHONE | 1 MONTH WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
-      "Cost": "842.00",
+      "Quantity": 0,
+      "Cost": "1,021.00",
       "BranchCost": 1123.1,
       "Price": "1,378.35"
     },
@@ -2811,7 +2643,7 @@
     {
       "Item": "WEBCAM:720P REDRAGON GW600",
       "Description": "REDRAGON GW600 FOBOS 720P 30FPS WEBCAM | 3 MONTHS WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT ONLY",
-      "Quantity": 2,
+      "Quantity": 4,
       "Cost": "1,080.00",
       "BranchCost": 1188,
       "Price": "1,458.00"
@@ -2843,7 +2675,7 @@
     {
       "Item": "WIFI RECEIVER:150MBPS LBLINK",
       "Description": "LBLINK 150MBPS WIFI DONGLE",
-      "Quantity": 6,
+      "Quantity": 10,
       "Cost": "150.00",
       "BranchCost": 165,
       "Price": "300.00"
@@ -2851,7 +2683,7 @@
     {
       "Item": "WIFI RECEIVER:150MBPS LBLINK W/ ANTENNA",
       "Description": "LBLINK 150MBPS WIFI DONGLE W/ ANTENNA",
-      "Quantity": 2,
+      "Quantity": 3,
       "Cost": "210.00",
       "BranchCost": 231,
       "Price": "315.00"
