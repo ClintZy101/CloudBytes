@@ -3,7 +3,7 @@
     {
       "Item": "BUNDLE:INTEL CORE I3 10TH GEN BUNDLE",
       "Description": "INTEL CORE  i3-10100 BOX 10TH GEN PROCESSOR 6M CACHE UP TO 4.30 GHz | 1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT ONLY....MSI H410 PRO INTEL H410 CHIPSET MOTHERBOARD |1 YEAR WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT ONLY",
-      "Quantity": 2,
+      "Quantity": 1,
       "Cost": "11,128.00",
       "Price": "11,856.00"
     },
@@ -52,7 +52,7 @@
     {
       "Item": "CASE FAN:12CM*1 AD-LINK BLACK",
       "Description": "AD-LINK 12CM BLACK SINGLE FAN",
-      "Quantity": 14,
+      "Quantity": 11,
       "Cost": "55.00",
       "Price": "80.00"
     },
@@ -94,9 +94,9 @@
     {
       "Item": "CASE FAN:12CM*3 KEYTECH STORM X3 PRO",
       "Description": "KEYTECH STORM X3 PRO ARGB COOLING FANS 3 IN 1 MUSIC SYNC GAMING FAN | 6 PIN CONNECTOR | ARGB LIGHTING | W/ REMOTE & HUB",
-      "Quantity": 0,
-      "Cost": "671.00",
-      "Price": "926.64"
+      "Quantity": 1,
+      "Cost": "712.00",
+      "Price": "983.26"
     },
     {
       "Item": "CASE FAN:8CM*1 AD-LINK BLACK",
@@ -108,7 +108,7 @@
     {
       "Item": "CASE FAN:KEYTECH STORM X3 3 IN 1 ARGB CO",
       "Description": "KEYTECH STORM X3 3 IN 1 ARGB COOLING FAN MUSIC SYNC GAMING FAN",
-      "Quantity": 2,
+      "Quantity": 1,
       "Cost": "712.80",
       "Price": "926.64"
     },
@@ -178,7 +178,7 @@
     {
       "Item": "CHASSIS:INPLAY METEOR 05",
       "Description": "INPLAY METEOR 05 | ATX,MATX,MITX, | TEMPERED SIDE PANEL | MESH FRONT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "1,113.00",
       "Price": "1,303.40"
     },
@@ -192,7 +192,7 @@
     {
       "Item": "CHASSIS:KEYTECH T1000 W/ 4 PCS RGB FANS",
       "Description": "KEYTECH T1000 WITH 4 PCS RGB FAN | TEMPERED SIDE PANEL ATX, MATX, MINI ITX | 1 MONTH WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "1,574.10",
       "Price": "1,931.85"
     },
@@ -260,11 +260,25 @@
       "Price": "5,451.60"
     },
     {
+      "Item": "GAMING TABLE:INPLAY T1 RGB GAMING TABLE | BL",
+      "Description": "INPLAY T1 RGB GAMING TABLE | BLACK |126 x 66 x 60 CM |1 MONTH WARRANTY | 1 WEEK OUTRIGHT REPLACEMENT",
+      "Quantity": 1,
+      "Cost": "4,196.50",
+      "Price": "4,578.00"
+    },
+    {
       "Item": "GRAPHICS CARD:ASUS ROG STRIX RX5500XT 8GB",
       "Description": "ASUS ROG STRIX RX5500XT 8GB..GAMING/DUAL FAN/GDDR6 128BIT/..AURASYNC | 1 YEAR WARRANTY 1 WEEK..OUTRIGHT REPLACEMENT",
       "Quantity": 1,
       "Cost": "13,060.95",
       "Price": "14,304.85"
+    },
+    {
+      "Item": "GRAPHICS CARD:GTX1050 TI GEFORCE 4GB MSI",
+      "Description": "MSI GEFORCE GTX1050 TI 4GT 4GB OCV1 GDDR5 128-BIT DISPLAY PORT, HDMI, DL-DVI-D",
+      "Quantity": 0,
+      "Cost": "8,679.84",
+      "Price": "8,679.84"
     },
     {
       "Item": "GRAPHICS CARD:GTX1660 TI AERO ITX GEFORCE MSI",
@@ -290,7 +304,7 @@
     {
       "Item": "INTERNAL HDD:500GB PIPELINE HD SEAGATE",
       "Description": "SEAGATE 500GB ST3500414CS PIPELINE HD",
-      "Quantity": 6,
+      "Quantity": 4,
       "Cost": "663.30",
       "Price": "862.29"
     },
@@ -318,7 +332,7 @@
     {
       "Item": "KEYBOARD & MOUSE:DELUX K6005U+M331BU",
       "Description": "DELUX K6005U+M331BU OFFICE KEYBOARD  AND MOUSE BUNDLE | LASER GRAVED | 15 DAYS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 1,
       "Cost": "343.20",
       "Price": "468.00"
     },
@@ -332,14 +346,14 @@
     {
       "Item": "KEYBOARD & MOUSE:INPLAY STX360",
       "Description": "INPLAY STX360 WIRED KEYBOARD & MOUSE W/ RAINBOW BACKLIGHT",
-      "Quantity": 0,
+      "Quantity": 3,
       "Cost": "283.80",
       "Price": "387.00"
     },
     {
       "Item": "KEYBOARD & MOUSE:INPLAY STX520 DARK KNIGHT",
       "Description": "INPLAY STX520 DARK KNIGHT | SUSPENSION KEYCAPESS | WIRED KEYBOARD & MOUSE W/ RAINBOW BACKLIGHT",
-      "Quantity": 2,
+      "Quantity": 1,
       "Cost": "445.50",
       "Price": "587.25"
     },
@@ -356,6 +370,13 @@
       "Quantity": 3,
       "Cost": "1,155.00",
       "Price": "1,417.50"
+    },
+    {
+      "Item": "KMHE BUNDLE:INPLAY STX240 BLACK COMBO",
+      "Description": "INPLAY STX 240 BLACK COMBO | KEYBOARD, MOUSE, HEADSET | 15 DAYS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
+      "Quantity": 2,
+      "Cost": "482.90",
+      "Price": "636.55"
     },
     {
       "Item": "KMHE BUNDLE:INPLAY STX540 BLACK",
@@ -409,7 +430,7 @@
     {
       "Item": "MONITOR:24 INCHES IP24V1 IPS NVISION",
       "Description": "NVISION 24\" IP2V1 IPS | 1920X1080 FHD | 75HZ | 23.8\" | 5MS | 300CD/M2 | 3000:1",
-      "Quantity": 2,
+      "Quantity": 0,
       "Cost": "5,445.30",
       "Price": "6,016.92"
     },
@@ -465,7 +486,7 @@
     {
       "Item": "MOTHERBOARD:B450 GIGABYTE S2H V2",
       "Description": "GIGABYTE B450S2H V2 AMD SOCKET AM4 2 DDR4 2-CH/ PCI-EX 16/MICRO ATX USB 3.1 GEN 1/ M.2 SOCKET 3 HD AUDIO/ GBE LAN",
-      "Quantity": 4,
+      "Quantity": 3,
       "Cost": "4,232.80",
       "Price": "4,631.50"
     },
@@ -473,8 +494,8 @@
       "Item": "MOTHERBOARD:B450M-A  ASUS PRIME II",
       "Description": "ASUS B450 PRIME B450M-A II AM4 DDR4 32MB BIOS MICRO ATX/AURA SYNC/ 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
       "Quantity": 0,
-      "Cost": "4,234.65",
-      "Price": "4,758.94"
+      "Cost": "4,355.64",
+      "Price": "4,894.91"
     },
     {
       "Item": "MOTHERBOARD:FM2A68HM-S1 FM2+ DDR3 GIGABYTE",
@@ -521,7 +542,7 @@
     {
       "Item": "MOUSEPAD:L11 MOUSE PAD",
       "Description": "L11 MOUSE PAD",
-      "Quantity": 44,
+      "Quantity": 43,
       "Cost": "30.80",
       "Price": "42.00"
     },
@@ -571,13 +592,13 @@
       "Item": "POWER SUPPLY:550 WATTS COOLER MASTER",
       "Description": "550 WATTS COOLER MASTER MWE WHITE  230V / US CABLE | 6 MONTHS WARRANTY | 1 WEEK REPLACEMENT",
       "Quantity": 0,
-      "Cost": "2,281.65",
-      "Price": "2,933.55"
+      "Cost": "2,390.30",
+      "Price": "3,073.24"
     },
     {
       "Item": "POWER SUPPLY:600 WATTS DARKFLASH 6 POWER SUP",
       "Description": "600 WATTS DARKFLASH 6 POWER SUPPLY | 6 MONTHS WARRANTY | 1 WEEK REPLACEMENT",
-      "Quantity": 2,
+      "Quantity": 0,
       "Cost": "1,925.00",
       "Price": "2,362.50"
     },
@@ -603,6 +624,13 @@
       "Price": "559.50"
     },
     {
+      "Item": "POWER SUPPLY:AVR SECURE 500W",
+      "Description": "AVR SECURE 500W",
+      "Quantity": 10,
+      "Cost": "275.00",
+      "Price": "412.50"
+    },
+    {
       "Item": "POWER SUPPLY:RAIDMAX RX-735AP-R 735W",
       "Description": "RAIDMAX RX-735AP-R 735W RGB 80PLUS..Bronze Certified SEMI MODULAR Powersupply |..1 YR WTY | 1wk Outright Replacement",
       "Quantity": 1,
@@ -610,9 +638,16 @@
       "Price": "4,062.50"
     },
     {
+      "Item": "PRINTER:EPSON L120",
+      "Description": "EPSON L120 SINGLE FUNCTION INK TANK PRINTER / 720X720dpi T6641/T6642/T6643/T6644 (6 MONTHS WARRANTY)",
+      "Quantity": 3,
+      "Cost": "5,724.00",
+      "Price": "6,500.00"
+    },
+    {
       "Item": "PRINTER:EPSON L3110 ECO TANK ALL IN ONE",
       "Description": "EPSON L3110 ECO TANK ALL IN ONE | PRINT, SCAN, COPY | MAX A4, LETTER | 300X300 DPI | COLOUR, BLK & WHITE, DRAFT, STANDARD | W/ FREE INK",
-      "Quantity": 4,
+      "Quantity": 2,
       "Cost": "7,990.50",
       "Price": "8,700.00"
     },
@@ -661,7 +696,7 @@
     {
       "Item": "PROCESSOR:RYZEN 5 2400G AMD",
       "Description": "AMD RYZEN 5 2400G W/ RADEON RX VEGA 11 GRAPHICS | 4 CORES, 8 THREADS | 3.6GHZ BASE | 3.9 GHZ MAX | 6MB SMART PREFETCH CACHE, UNLOCKED | AM4 | W/ HEATSINK FAN",
-      "Quantity": 3,
+      "Quantity": 2,
       "Cost": "7,068.60",
       "Price": "7,769.68"
     },
@@ -669,7 +704,7 @@
       "Item": "PROCESSOR:RYZEN 5 3400G AMD",
       "Description": "AMD RYZEN 5 3400G W/ RADEON VEGA 11 GRAPHICS | 4 CORES, 8 THREADS | 3.7GHZ BASE | 4.2GHZ MAX | 6MB CACHE, UNLOCKED | AM4 | W/ HEATSINK FAN",
       "Quantity": 1,
-      "Cost": "8,373.75",
+      "Cost": "9,672.80",
       "Price": "10,396.00"
     },
     {
@@ -694,6 +729,13 @@
       "Price": "5,192.00"
     },
     {
+      "Item": "RAM:16GB (2X8) DDR4-3200 TEAMGROUP:TEAM GROUP DARK Z 2X8GB 3200MHZ",
+      "Description": "TEAM GROUP DARK Z 2X8GB 3200MHZ DDR4 |GRAY (TDZGD416G3200HC16CDC01) | NON-RGB | 6 MONTHS WARRANTY | 3 DAYS OUTRIGHT REPLACEMENT",
+      "Quantity": 1,
+      "Cost": "4,896.10",
+      "Price": "5,252.18"
+    },
+    {
       "Item": "RAM:16GB DDR4-3200 2X8 DELTA TUF",
       "Description": "TEAMGROUP DELTA TUF UD-D4 3200MHZ 8GBX2 RGB DDR4 1 YEAR WARRANTY 1 WEEK OUTRIGHT REPLACEMENT",
       "Quantity": 0,
@@ -704,8 +746,8 @@
       "Item": "RAM:16GB(2X8) DDR4-3200  AVEXIR",
       "Description": "AVEXIR 16GB DDR4 3200MHZ CORE 2 (AVD4UZ332001608G -2C2C)",
       "Quantity": 2,
-      "Cost": "4,668.41",
-      "Price": "4,712.04"
+      "Cost": "4,712.04",
+      "Price": "4,756.08"
     },
     {
       "Item": "RAM:4GB DDR3-1600 SKIHOTAR",
@@ -717,21 +759,21 @@
     {
       "Item": "RAM:8 GB AVEXIR DDR4-2666 MHZ RGB",
       "Description": "8 GB AVEXIR AVD4UZ326661908G-1COR DDR4- 2666 C19 1.2V | 15 DAYS OUTRIGHT REPLACEMENT | 6 MONTHS WARRANTY",
-      "Quantity": 4,
+      "Quantity": 3,
       "Cost": "2,244.00",
       "Price": "2,754.00"
     },
     {
       "Item": "RAM:8GB DDR3-1600 AVEXIR",
       "Description": "AVEXIR 8GB DDR3-1600 C11 1.5V AVD3U16001108G-1BW",
-      "Quantity": 0,
-      "Cost": "1,522.61",
-      "Price": "1,921.05"
+      "Quantity": 1,
+      "Cost": "1,565.30",
+      "Price": "1,974.91"
     },
     {
       "Item": "RAM:8GB DDR4-2666 HYPER-X KINGSTON",
       "Description": "KINGSTON 8GB DDR4 2666MHZ KHX426C16FB3/8 HYPER-X FURY BLACK",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "2,022.30",
       "Price": "2,730.11"
     },
@@ -745,9 +787,9 @@
     {
       "Item": "RAM:8GB SKIHOTAR DDR4 2666MHZ",
       "Description": "8GB SKIHOTAR DDR4 2666MHZ | 1 YEAR WARRANTY",
-      "Quantity": 0,
-      "Cost": "2,037.20",
-      "Price": "2,501.55"
+      "Quantity": 5,
+      "Cost": "2,038.30",
+      "Price": "2,502.90"
     },
     {
       "Item": "SPEAKER:KEYTECH S10 MINI SPEAKER BLACK",
@@ -780,7 +822,7 @@
     {
       "Item": "SPEAKER:REDRAGON ORPHEUS GS550",
       "Description": "REDRAGON ORPHEUS GS550 SPEAKER",
-      "Quantity": 3,
+      "Quantity": 2,
       "Cost": "605.00",
       "Price": "786.50"
     },
@@ -829,7 +871,7 @@
     {
       "Item": "SSD:240GB A400 KINGSTON",
       "Description": "KINGSTON A400 240GB SA400S37/240G 2.5 SATA III INTERNAL SSD",
-      "Quantity": 8,
+      "Quantity": 6,
       "Cost": "1,790.80",
       "Price": "2,197.80"
     },
@@ -850,7 +892,7 @@
     {
       "Item": "USB WIFI ADAPTER:150MBPS BL-WN151 LB-LINK",
       "Description": "LB-LINK BL-WN151 150MBPS WIRELESS N USB ADAPTER",
-      "Quantity": 4,
+      "Quantity": 2,
       "Cost": "165.00",
       "Price": "300.00"
     },
@@ -864,7 +906,7 @@
     {
       "Item": "WEBCAM:720P RED DRAGON FOBOS",
       "Description": "720P RED DRAGON FOBOS",
-      "Quantity": 1,
+      "Quantity": 0,
       "Cost": "1,134.00",
       "Price": "1,458.00"
     },
