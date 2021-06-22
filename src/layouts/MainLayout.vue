@@ -17,7 +17,7 @@
          <q-btn flat round color="grey-3" icon="lock" @click="lock" />
          <q-btn flat round color="grey-3" :icon="getFullScreenIcon" @click="fullScreen" />
         <div class="q-ml-md">
-          v0.9
+          v0.10
         </div>
       </q-toolbar>
     </q-header>
