@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
 import _ from "lodash";
 import v from "voca";
-import tarlac from "assets/inventory_tarlac.json";
-import talavera from "assets/inventory_talavera.json";
-import rosales from "assets/inventory_rosales.json";
+import tarlac from "assets/json_files/inventory_tarlac.json";
+import talavera from "assets/json_files/inventory_talavera.json";
+import rosales from "assets/json_files/inventory_rosales.json";
 
 function round(num) {
   var m = Number((Math.abs(num) * 100).toPrecision(15));
@@ -53,7 +53,7 @@ const getInterestDiff = data => {
 export function getItems(storeType) {
   const items = [];
   if (storeType === "Tarlac") {
-    _.forEach(tarlac.Items, data => {
+    _.forEach(tarlac, data => {
       items.push({
         id: uuidv4(),
         available_items: data.Quantity,
@@ -80,8 +80,8 @@ export function getItems(storeType) {
     });
   } else {
     let inv_items = null;
-    if (storeType === "Rosales") inv_items = rosales.Items;
-    if (storeType === "Talavera") inv_items = talavera.Items;
+    if (storeType === "Rosales") inv_items = rosales;
+    if (storeType === "Talavera") inv_items = talavera;
     if (inv_items !== null) {
       inv_items.forEach(data => {
         items.push({

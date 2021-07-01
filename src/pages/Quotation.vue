@@ -147,17 +147,17 @@ export default {
         case "Tarlac": 
           return {
             store: 'Tarlac',
-            updated: 'June 22, 2021'
+            updated: 'July 1, 2021'
           }
         case "Rosales":
           return {
             store: 'Rosales',
-            updated: 'June 14, 2021'
+            updated: 'July 1, 2021'
           }
         case "Talavera":
           return {
             store: 'Talavera',
-            updated: 'June 14, 2021'
+            updated: 'July 1, 2021'
           }
         default:
           return null;
