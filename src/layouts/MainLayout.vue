@@ -17,8 +17,13 @@
          <q-btn flat round color="grey-3" icon="lock" @click="lock" />
          <q-btn flat round color="grey-3" :icon="getFullScreenIcon" @click="fullScreen" />
         <div class="q-ml-md">
-          v0.11
+          v0.12
         </div>
+      </q-toolbar>
+      <q-toolbar inset class="bg-white text-primary">
+        <q-toolbar-title>
+          <q-icon name="subdirectory_arrow_right" /> {{ getRouteName }}
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
@@ -88,6 +93,9 @@ import { AppFullscreen } from 'quasar'
       getFullScreenIcon() {
         if (this.isFullScreen) return 'fullscreen_exit';
         else return 'fullscreen'
+      },
+      getRouteName () {
+        return this.$route.name;
       }
     },
     methods: {

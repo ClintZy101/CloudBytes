@@ -1,12 +1,12 @@
 <template>
   <q-page padding>
-    <q-toolbar class="bg-grey-3 text-primary rounded-borders">
+    <!-- <q-toolbar class="bg-grey-3 text-primary rounded-borders">
       <q-toolbar-title>
         Make a Quotation
       </q-toolbar-title>
-    </q-toolbar>
+    </q-toolbar> -->
     <item-list-popup v-model="itemListDialog" :store-type="storeType" @item-select="itemSelect" />
-      <div class="q-gutter-sm q-mt-sm">
+      <div class="q-gutter-sm">
         <q-radio v-model="storeChange" val="Tarlac" label="Tarlac" @input="storeTypeChange" />
         <q-radio v-model="storeChange" val="Rosales" label="Rosales" @input="storeTypeChange" />
         <q-radio v-model="storeChange" val="Talavera" label="Talavera" @input="storeTypeChange" />
@@ -32,6 +32,16 @@
             <q-chip color="secondary" text-color="white">
               {{ getAmount(item) }}
             </q-chip>
+          </q-item-section>
+          <q-item-section side>
+              <div class="column">
+                <div class="col">
+                  <q-btn @click="increaseQuantity(item.id)" size="sm" icon="arrow_drop_up" />
+                </div>
+                <div class="col">
+                  <q-btn @click="decreaseQuantity(item.id)" size="sm" icon="arrow_drop_down" />
+                </div>
+              </div>
           </q-item-section>
         </q-item>
       </q-slide-item>
@@ -247,6 +257,51 @@ export default {
       this.totalCost += item.cost;
       this.totalPrice += item.price;
     },
+    increaseQuantity (id) {
+      if (this.items.length > 0) {
+        const find = _.find(this.items, x => x.id === id);
+        if (find !== undefined && find.quantity >= 1 ) {
+           const findIndex = _.findIndex(this.items, x => x.id === id);
+          if (findIndex > -1) {
+            this.items[findIndex].quantity++;
+            this.addTotal(this.items[findIndex]);
+            this.saveQuote();
+          }
+        }
+      }
+    },
+    decreaseQuantity (id) {
+      if (this.items.length > 0) {
+        const find = _.find(this.items, x => x.id === id);
+        if (find !== undefined && find.quantity === 1) {
+          this.$q.notify({
+            type: 'primary',
+            message: 'You can remove the item instead of decreasing the quantity.'
+          });
+        } else {
+          find.quantity--;
+          this.minusTotal(find);
+          this.$forceUpdate(); 
+          // this.finalize(reset);
+        }
+        this.saveQuote();
+      }
+    },
+    itemSelect(data) {
+      if (this.items.length > 0) {
+        const findIndex = _.findIndex(this.items, x => x.details.item_name === data.details.item_name);
+        if (findIndex > -1) {
+          this.items[findIndex].quantity++;
+          this.addTotal(this.items[findIndex]);
+          this.saveQuote();
+          return;
+        }
+      } 
+      data.quantity = 1;
+      this.addTotal(data);
+      this.items.push(data);
+      this.saveQuote();
+    },
     removeItem ({ reset }, id) {
       if (this.items.length > 0) {
         const find = _.find(this.items, x => x.id === id);
@@ -277,21 +332,6 @@ export default {
         totalPrice: this.totalPrice
       };
       this.$store.dispatch('saveQuote', data);
-    },
-    itemSelect(data) {
-      if (this.items.length > 0) {
-        const findIndex = _.findIndex(this.items, x => x.details.item_name === data.details.item_name);
-        if (findIndex > -1) {
-          this.items[findIndex].quantity++;
-          this.addTotal(this.items[findIndex]);
-          this.saveQuote();
-          return;
-        }
-      } 
-      data.quantity = 1;
-      this.addTotal(data);
-      this.items.push(data);
-      this.saveQuote();
     },
     getFormattedCost(item) {
       return PESO(item.cost * item.quantity).format();

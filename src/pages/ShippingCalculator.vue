@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
-    <q-toolbar class="bg-grey-3 text-primary rounded-borders">
+    <!-- <q-toolbar class="bg-grey-3 text-primary rounded-borders">
       <q-toolbar-title>
         Shipping Calculator
       </q-toolbar-title>
-    </q-toolbar>
+    </q-toolbar> -->
     <div class="q-gutter-sm">
       <q-radio @input="changeVehicle" v-model="vehicleType" val="motor" label="Motor" color="blue" />
       <q-radio @input="changeVehicle" v-model="vehicleType" val="sedan" label="Sedan Car" color="teal" />

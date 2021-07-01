@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
-    <q-toolbar class="bg-grey-3 text-primary rounded-borders">
+    <!-- <q-toolbar class="bg-grey-3 text-primary rounded-borders">
       <q-toolbar-title>
         Pricing Report
       </q-toolbar-title>
-    </q-toolbar>
+    </q-toolbar> -->
     <div class="q-pa-md">
       <div class="text-secondary text-h6">Price level</div>
       <q-scroll-area
@@ -31,7 +31,7 @@
           </tbody>
         </q-markup-table>
       </q-scroll-area>
-      <div class="text-secondary text-h6">Branch Cost level</div>
+      <div class="text-secondary text-h6 q-mt-md">Branch Cost level</div>
       <q-scroll-area
         :thumb-style="thumbStyle"
         :bar-style="barStyle"
