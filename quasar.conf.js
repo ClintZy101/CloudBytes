@@ -8,7 +8,7 @@
 /* eslint-env node */
 const ESLintPlugin = require("eslint-webpack-plugin");
 
-module.exports = function(/* ctx */) {
+module.exports = function(ctx) {
   return {
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
@@ -19,7 +19,7 @@ module.exports = function(/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v1.quasar.dev/quasar-cli/boot-files
-    boot: ["axios", "syncfusion", "global-components"],
+    boot: ["axios", "syncfusion", "global-components", "spreadsheet"],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: ["app.scss"],
@@ -40,6 +40,12 @@ module.exports = function(/* ctx */) {
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
+      env: {
+        GOOGLE_SERVICE_ACCOUNT_EMAIL:
+          "google-sheet-service-account@cloud-mobile-app-318506.iam.gserviceaccount.com",
+        GOOGLE_PRIVATE_KEY:
+          "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChyD8qFiZBz985\nC2/wjB1sjlX+BaKc9zxBM0RNeWGaxrWU588VID90zBtZyj/FhNnQDbrNe7W24yY6\ntvt54yn/tG3qx7UM/QmcMpNzgtHqi0kmpTXLVFSXTq/OWqvkIllXPuyI6vt2UIAE\no/VVx5wC2J9dkaRhux8gXP685oaCmbeAD2GhY/9MPoww6u3Oy9LYAQ36ni6J4qHu\nh5xJv7FgZN60ck+X/XK5cXO09+t9J2LfTyzKukKaxDahXptgac7j0xNz/C+VdLdD\nOol0eMKmmMm7/py5l2IO9uCkja201TfGQ1UGHqlUMLyDkZMuW8+XRobcBQlezV4q\nwoAUrJ2vAgMBAAECggEAA9M1txuF9QliqDkegOv3KCFnZBWjBh4MVShOpZxIk/29\nvlMKwN+d0Heg7+sJvfRJqBMjBwe1QKk3Nq0r3fJihFKyRJpLLA7xgrlpZhJCP07i\nwGComHGafGdWXcUkCkVLonXw5r3TizUVCccMnmYVSLXxcqdmYQ8pCb1ZIoM6y+yn\n2+yUB6qrl4T58RD2AJYX9A8x/GrtqoZ7Qhh4y29nAELtcjr4fYYSKiA98KYGA85K\nkxQ7OOYXRQ6pdEvgspvBhsVW87/7xHma2AeMB8NSS0I+/wrSmV3OURQlKHvUwznI\nWAWGrKARof0NTvf5gQBJ15RylJeke3D5QTc7JYYxSQKBgQDMQgOTd5eRFXvuchGe\ncaBYz6d89m1aSZbQHiCgi7gtxhIz3+X3zKrajqr1fWwm5HNjo5uiRORaAJ2ffQ4V\nMS1CgTX0TAJEI3I3/CqJI85ixEfWCS473At9V+/23xnumM6xCqFjBaJ9qKn3Q9gw\nbMrJNz+ZB0S2oXvB06PBqjatdwKBgQDKw7cOzef6iEhH/foYAl5bMeB06UZgMhA2\nf+ee/VtJ1VD7GTVnU0i7p9u2U07cAKe1UjPc8YD14KBE3zMzFXh/veq8V9EGtm3/\nytbTvRIesZJAjujjryMI1VmlhDGz3ZEhPa2Pgk2z4UX1EzwTNZTZyfbgcSwyLawI\nhkqMZXK/iQKBgEsyNlzQ10S7Uw+6gNAC5tQrRm7TzfhCRTpDDSHtrhVz6PmeAOyU\nNYYWpcuQrAM5cV2KOt6nXCXiOiUgBdI5c38bUICqht8M6ZzAwewQ+YcU2ZlrcdDp\ntnUjrZ0GD2bubJFy520sAuEd+cyk9m8FbjZbl5c/vMU7d/Modg3zGwQLAoGAfDUb\n5BO6MTxemss38pEw38hT6QolNDQ2vkvnxPsKetYTf13X2u2ntlyDONMbkaVNFsO+\nRXAjQXtSch4QLRDP+eCK9MkOoIAMLg9BPf+qI+c+4hEpFKBqY7Td74hlMfteNfCk\nay61DqXGxvP7bwD5p9gSRTbOjgZwReCNtidG/ZECgYBu20RMp4/K5ZJhMKt6/6FI\nnyffaKzACmdLtJHG8Txg50v1unTf2IYB8fUT0s9UFg3aI3Yx/2cF7Ifr++TGPBow\nHvpCD4uK30WMACdLUGYsQG5VfojfR96bLRCPE7N1axNjE8CovrO5jLBSoZKxaheS\nLln96qX4qXQi82Orv6BcqQ==\n-----END PRIVATE KEY-----\n"
+      },
       vueRouterMode: "hash", // available values: 'hash', 'history'
 
       // transpile: false,
