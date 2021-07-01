@@ -20,6 +20,11 @@ const routes = [
         component: () => import("pages/Quotation.vue")
       },
       {
+        name: "Warranty Checker",
+        path: "/warranty-checker",
+        component: () => import("pages/WarrantyChecker.vue")
+      },
+      {
         path: "/pattern-lock",
         component: () => import("pages/PatternLockPage.vue")
       }

@@ -79,13 +79,19 @@ import { AppFullscreen } from 'quasar'
             name: 'pricing',
             icon: 'summarize',
             label: 'Pricing Report',
-            to: 'pricing-report'
+            to: '/pricing-report'
           },
           {
             name: 'quotation',
             icon: 'ballot',
             label: 'Quotations',
-            to: 'quotation'
+            to: '/quotation'
+          },
+          {
+            name: 'warranty',
+            icon: 'verified',
+            label: 'Warranty Checker',
+            to: '/warranty-checker'
           }]
       }
     },
