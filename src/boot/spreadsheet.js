@@ -1,4 +1,5 @@
 import creds from "app/config/cloud-mobile-app-318506-de8cb0e43819.json";
+import { v4 as uuidv4 } from "uuid";
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 
 // Initialize the sheet - doc ID is the long id in the sheets URL
@@ -27,6 +28,7 @@ const getSpreadsheetData = async () => {
       }
     }
     datas.push({
+      id: uuidv4(),
       date: rows[i].DATE,
       reference: rows[i].REFERENCE,
       category: rows[i].CATEGORY,
